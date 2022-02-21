@@ -61,7 +61,7 @@ const IndexPage = () => {
           Make a booking
         </button>
       </div>
-      <div className="container m-auto flex flex-col justify-center items-center md:justify-between md:flex-row w-full h-full">
+      <div className="container m-auto flex flex-col justify-center items-center md:justify-between md:flex-row w-full h-full px-2">
         <div className="flex-1 mr-2 bg-offWhite p-3 rounded-md shadow">
           <div className="border-2 border-black p-3 flex flex-col items-center">
             <StaticImage src="../images/cheese_1.png" width="100" />
@@ -74,7 +74,7 @@ const IndexPage = () => {
             </p>
             <Link
               to="/menu"
-              className="self-start flex flex-row items-center justify-center mt-6 hover:text-jeans hover:cursor-pointer"
+              className="self-start flex flex-row items-center justify-center mt-6 text-gray-700 hover:text-jeans hover:cursor-pointer"
             >
               <h3 className="uppercase">See Menu</h3>
               <FiChevronsRight className="ml-2" />
@@ -85,8 +85,8 @@ const IndexPage = () => {
           IMAGE
         </div>
       </div>
-      <div className="container m-auto  flex flex-col justify-between md:flex-row w-full mt-12">
-        <div className="flex-1 mr-2 bg-slate-900 hidden md:flex text-white">
+      <div className="container m-auto flex flex-col justify-center items-center md:justify-between md:flex-row w-full h-full mt-12 px-2">
+        <div className="hidden md:flex flex-1 ml-2 bg-slate-900 text-white text-center w-full">
           IMAGE
         </div>
         <div className="flex-1 ml-2 bg-offWhite p-3 rounded-md shadow">
@@ -101,7 +101,7 @@ const IndexPage = () => {
             </p>
             <Link
               to="/menu"
-              className="self-start flex flex-row items-center justify-center mt-6 hover:text-jeans hover:cursor-pointer"
+              className="self-start flex flex-row items-center justify-center mt-6 text-gray-700 hover:text-jeans hover:cursor-pointer"
             >
               <h3 className="uppercase">See Menu</h3>
               <FiChevronsRight className="ml-2" />
@@ -109,25 +109,20 @@ const IndexPage = () => {
           </div>
         </div>
       </div>
-      <div className="container m-auto  flex flex-col justify-between md:flex-row w-full mt-12">
+      <div className="container m-auto flex flex-col justify-center items-center md:justify-between md:flex-row w-full h-full mt-12 px-2">
         <div className="flex-1 mr-2 bg-offWhite p-3 rounded-md shadow">
           <div className="border-2 border-black p-3 flex flex-col items-center">
             <StaticImage src="../images/drinks_1.png" width="100" />
             <h1 className="uppercase mb-6">Wine</h1>
             <p>
-              Commodo ex et exercitation sunt et aute adipisicing est
-              reprehenderit nostrud sunt. Cupidatat aliqua dolor nulla
-              adipisicing sit excepteur anim non. Quis dolor aliqua irure magna.
-              Sunt consectetur veniam labore ad veniam ullamco elit ad occaecat
-              qui voluptate adipisicing nulla. Sit consectetur do laborum aliqua
-              aliquip. Excepteur magna deserunt irure aliquip anim in do
-              voluptate laborum. Duis nostrud est commodo in cillum laborum anim
-              ex laborum. Fugiat pariatur nisi do sint in anim mollit veniam sit
-              ut.
+              Consectetur veniam in culpa consectetur nostrud adipisicing Lorem
+              enim laborum Lorem. Laborum sint velit aliqua laborum fugiat Lorem
+              aliquip deserunt. Incididunt laborum eiusmod dolor tempor qui. Qui
+              ut ipsum labore irure aute. In cillum elit fugiat enim eiusmod eu.
             </p>
             <Link
               to="/menu"
-              className="self-start flex flex-row items-center justify-center  mt-6 hover:text-jeans hover:cursor-pointer"
+              className="self-start flex flex-row items-center justify-center  mt-6 text-gray-700 hover:text-jeans hover:cursor-pointer"
             >
               <h3 className="uppercase">See Menu</h3>
               <FiChevronsRight className="ml-2" />
@@ -136,6 +131,44 @@ const IndexPage = () => {
         </div>
         <div className="flex-1 ml-2 bg-slate-900 hidden md:flex text-white">
           IMAGE
+        </div>
+      </div>
+      <div className="">
+        <h1 className="mt-12 pl-2">What's On</h1>
+        <div className="flex flex-col md:flex-row justify-around mt-8 px-2">
+          <div className="p-2 flex-1 rounded shadow border ">
+            <h3>Thirsty Thurdays</h3>
+            <p>12th May 22</p>
+            <p className="text-sm mt-4">
+              Aliquip nulla adipisicing ad sint anim irure reprehenderit ullamco
+              ipsum reprehenderit pariatur consectetur anim.
+            </p>
+            <button className="uppercase flex items-center px-3 py-2 text-black border border-black rounded hover:text-white hover:border-jeans hover:bg-jeans m-auto mt-8">
+              Make a booking
+            </button>
+          </div>
+          <div className="p-2 flex-1 rounded shadow border mx-2">
+            <h3>Sinatra Sundays</h3>
+            <p>12th May 22</p>
+            <p className="text-sm mt-4">
+              Aliquip nulla adipisicing ad sint anim irure reprehenderit ullamco
+              ipsum reprehenderit pariatur consectetur anim.
+            </p>
+            <button className="uppercase flex items-center px-3 py-2 text-black border border-black rounded hover:text-white hover:border-jeans hover:bg-jeans m-auto mt-8">
+              Make a booking
+            </button>
+          </div>
+          <div className="p-2 flex-1 rounded shadow border ">
+            <h3>Laneway Sessions</h3>
+            <p>12th May 22</p>
+            <p className="text-sm mt-4">
+              Aliquip nulla adipisicing ad sint anim irure reprehenderit ullamco
+              ipsum reprehenderit pariatur consectetur anim.
+            </p>
+            <button className="uppercase flex items-center px-3 py-2 text-black border border-black rounded hover:text-white hover:border-jeans hover:bg-jeans m-auto mt-8">
+              Make a booking
+            </button>
+          </div>
         </div>
       </div>
     </Layout>
