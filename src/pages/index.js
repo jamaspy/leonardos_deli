@@ -136,7 +136,7 @@ const IndexPage = () => {
       <div className="">
         <h1 className="mt-12 pl-2">What's On</h1>
         <div className="flex flex-col md:flex-row justify-around mt-8 px-2">
-          <div className="p-2 flex-1 rounded shadow border ">
+          <div className="p-2 flex-1 rounded shadow border my-4 md:my-0">
             <h3>Thirsty Thurdays</h3>
             <p>12th May 22</p>
             <p className="text-sm mt-4">
@@ -147,7 +147,7 @@ const IndexPage = () => {
               Make a booking
             </button>
           </div>
-          <div className="p-2 flex-1 rounded shadow border mx-2">
+          <div className="p-2 flex-1 rounded shadow border mx-0 md:mx-2 my-4 md:my-0">
             <h3>Sinatra Sundays</h3>
             <p>12th May 22</p>
             <p className="text-sm mt-4">
@@ -158,7 +158,7 @@ const IndexPage = () => {
               Make a booking
             </button>
           </div>
-          <div className="p-2 flex-1 rounded shadow border ">
+          <div className="p-2 flex-1 rounded shadow border my-4 md:my-0 ">
             <h3>Laneway Sessions</h3>
             <p>12th May 22</p>
             <p className="text-sm mt-4">
