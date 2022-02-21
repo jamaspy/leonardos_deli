@@ -1,13 +1,20 @@
+@import "../styles/typography.css";
 @tailwind base;
+
+body {
+  font-family: "GT Flexa Mono Regular Trial";
+}
 
 h1 {
   @apply text-2xl;
+  font-family: "GT Flexa Mono Medium Trial";
 }
 h2 {
   @apply text-xl;
 }
 h3 {
   @apply text-lg;
+  font-family: "GT Flexa Mono Medium Trial";
 }
 a {
   @apply text-blue-600;

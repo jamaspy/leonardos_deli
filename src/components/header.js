@@ -1,61 +1,100 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React, { useState } from "react"
-
+import { StaticImage } from "gatsby-plugin-image"
+import { BsCart3 } from "react-icons/bs"
 function Header({ siteTitle }) {
   const [isExpanded, toggleExpansion] = useState(false)
 
   return (
-    <nav className="flex flex-wrap items-center justify-between p-6 mb-6 bg-gray-800">
-      <div className="flex items-center flex-shrink-0 mr-6 text-white">
-        <span className="text-xl font-semibold tracking-tight">
-          {siteTitle}
-        </span>
-      </div>
-      <div className="block lg:hidden">
-        <button
-          onClick={() => toggleExpansion(!isExpanded)}
-          className="flex items-center px-3 py-2 text-white border border-white rounded hover:text-white hover:border-white"
-        >
-          <svg
-            className="w-3 h-3 fill-current"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
+    <nav className="flex flex-wrap items-center justify-between p-4 bg-white">
+      <div className="container m-auto">
+        <div className="lg:hidden w-full flex items-center justify-between">
+          <div className="flex flex-col items-center justify-center">
+            <StaticImage src="../images/Logo_Black.svg" width="110" />
+            <p className="text-gray-700 mt-1 text-xs">Avalon Beach</p>
+          </div>
+          <button
+            onClick={() => toggleExpansion(!isExpanded)}
+            className="flex items-center px-3 py-2 text-black border border-black rounded hover:text-jeans hover:border-jeans hover:border-b hover:border-b-jeans"
           >
-            <title>Menu</title>
-            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-          </svg>
-        </button>
-      </div>
-      <div
-        className={`${
-          isExpanded ? `block` : `hidden`
-        } w-full block flex-grow lg:flex lg:items-center lg:w-auto`}
-      >
-        <div className="text-sm lg:flex-grow">
+            <svg
+              className="w-3 h-3 fill-current"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <title>Menu</title>
+              <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+            </svg>
+          </button>
+        </div>
+
+        <div
+          className={`${
+            isExpanded ? `block` : `hidden`
+          } w-full block flex-grow lg:flex lg:items-center lg:justify-between lg:w-auto`}
+        >
+          <div className="text-sm lg:flex-1 text-center lg:text-left uppercase">
+            {/* <Link
+              to={`/`}
+              href="#responsive-header"
+              className="block mt-4 mr-6 text-gray-700 lg:inline-block lg:mt-0 hover:text-black"
+            >
+              Shop
+            </Link> */}
+
+            <Link
+              to={`/about`}
+              className="block mt-4 mr-6 text-gray-700 lg:inline-block lg:mt-0 hover:text-jeans hover:underline"
+            >
+              About
+            </Link>
+            <Link
+              to={`/menu`}
+              className="block mt-4 mr-6 text-gray-700 lg:inline-block lg:mt-0 hover:text-jeans hover:underline"
+            >
+              Menu
+            </Link>
+            <Link
+              to={`/whatson`}
+              className="block mt-4 mr-6 text-gray-700 lg:inline-block lg:mt-0 hover:text-jeans hover:underline"
+            >
+              What's On
+            </Link>
+            <a
+              href="https://www.thefork.com.au/restaurant/leonardo-s-r714169"
+              target="_blank"
+              rel="noreferrer"
+              className=" mt-4 mr-6 text-gray-700 inline-block lg:mt-0 hover:text-jeans hover:underline lg:hidden"
+            >
+              Book a Table
+            </a>
+            <Link
+              to={`/contact`}
+              className="block mt-4 mr-6 text-gray-700 lg:inline-block lg:mt-0 hover:text-jeans hover:underline"
+            >
+              Contact
+            </Link>
+          </div>
           <Link
             to={`/`}
-            href="#responsive-header"
-            className="block mt-4 mr-4 text-white lg:inline-block lg:mt-0 hover:text-white"
+            style={{ maxWidth: `150px` }}
+            className="hidden lg:flex lg:flex-col flex-1 items-center justify-center mr-8 w-full "
           >
-            Home
+            <StaticImage src="../images/Logo_Black.svg" />
+            <p className="text-gray-700 mt-2 text-xs">Avalon Beach</p>
           </Link>
-          <Link
-            to={`/page-2`}
-            className="block mt-4 mr-4 text-white lg:inline-block lg:mt-0 hover:text-white"
-          >
-            page 2
-          </Link>
-        </div>
-        <div>
-          <a
-            href="https://github.com/kosvrouvas/gatsby-tailwindcss-starter"
-            target="_blank"
-            rel="noreferrer"
-            className="inline-block px-4 py-2 mt-4 text-sm leading-none text-white border border-white rounded hover:border-transparent hover:text-black hover:bg-white lg:mt-0"
-          >
-            Download
-          </a>
+          <div className="relative flex lg:items-end lg:justify-end items-center justify-center mt-6 lg:mt-0 flex-1">
+            <a
+              href="https://www.thefork.com.au/restaurant/leonardo-s-r714169"
+              target="_blank"
+              rel="noreferrer"
+              className="hidden lg:inline-block mt-4 text-sm  text-gray-700 hover:underline hover:text-jeans lg:mt-0 uppercase"
+            >
+              {/* <BsCart3 className="text-white text-2xl" /> */}
+              Book a table
+            </a>
+          </div>
         </div>
       </div>
     </nav>
