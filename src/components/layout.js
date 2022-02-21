@@ -8,7 +8,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-import { FaInstagram, FaFacebook, FaTwitter, FaYoutube } from "react-icons/fa"
+
 import { FiFacebook, FiInstagram, FiTwitter, FiYoutube } from "react-icons/fi"
 import Header from "./header"
 

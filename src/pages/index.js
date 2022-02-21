@@ -3,8 +3,8 @@ import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import { useStaticQuery, graphql } from "gatsby"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import Seo from "../components/seo"
+import { GatsbyImage } from "gatsby-plugin-image"
 import { FiChevronsRight } from "react-icons/fi"
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
@@ -43,7 +43,7 @@ const IndexPage = () => {
   console.log("🚀  TESTY:  : IndexPage : data", heroData)
   return (
     <Layout>
-      <SEO title="Home" />
+      <Seo title="Home" />
       <div className="hidden md:block">
         <GatsbyImage image={heroData} alt={`leo store front`} />
       </div>
@@ -72,10 +72,13 @@ const IndexPage = () => {
               aliquip deserunt. Incididunt laborum eiusmod dolor tempor qui. Qui
               ut ipsum labore irure aute. In cillum elit fugiat enim eiusmod eu.
             </p>
-            <div className="self-start flex flex-row items-center justify-center mt-6 hover:text-jeans hover:cursor-pointer">
+            <Link
+              to="/menu"
+              className="self-start flex flex-row items-center justify-center mt-6 hover:text-jeans hover:cursor-pointer"
+            >
               <h3 className="uppercase">See Menu</h3>
               <FiChevronsRight className="ml-2" />
-            </div>
+            </Link>
           </div>
         </div>
         <div className="hidden md:flex flex-1 ml-2 bg-slate-900 text-white text-center w-full">
@@ -96,10 +99,13 @@ const IndexPage = () => {
               aliquip deserunt. Incididunt laborum eiusmod dolor tempor qui. Qui
               ut ipsum labore irure aute. In cillum elit fugiat enim eiusmod eu.
             </p>
-            <div className="self-start flex flex-row items-center justify-center mt-6 hover:text-jeans hover:cursor-pointer">
+            <Link
+              to="/menu"
+              className="self-start flex flex-row items-center justify-center mt-6 hover:text-jeans hover:cursor-pointer"
+            >
               <h3 className="uppercase">See Menu</h3>
               <FiChevronsRight className="ml-2" />
-            </div>
+            </Link>
           </div>
         </div>
       </div>
@@ -119,10 +125,13 @@ const IndexPage = () => {
               ex laborum. Fugiat pariatur nisi do sint in anim mollit veniam sit
               ut.
             </p>
-            <div className="self-start flex flex-row items-center justify-center  mt-6 hover:text-jeans hover:cursor-pointer">
+            <Link
+              to="/menu"
+              className="self-start flex flex-row items-center justify-center  mt-6 hover:text-jeans hover:cursor-pointer"
+            >
               <h3 className="uppercase">See Menu</h3>
               <FiChevronsRight className="ml-2" />
-            </div>
+            </Link>
           </div>
         </div>
         <div className="flex-1 ml-2 bg-slate-900 hidden md:flex text-white">
