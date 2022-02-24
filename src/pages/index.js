@@ -6,6 +6,8 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { FiChevronsRight } from "react-icons/fi"
+import Event from "../components/Event"
+import Button from "../components/Button"
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
     {
@@ -35,12 +37,30 @@ const IndexPage = () => {
           }
         }
       }
+      whatson: allContentfulEvent {
+        nodes {
+          title
+          date
+          description
+          image {
+            gatsbyImageData(
+              quality: 100
+              width: 300
+              height: 300
+              placeholder: TRACED_SVG
+              formats: [AUTO, WEBP, AVIF]
+              # layout: FULL_WIDTH
+            )
+          }
+        }
+      }
     }
   `)
 
   const heroData = data.web.nodes[0].childImageSharp.gatsbyImageData
   const heroMobileData = data.mobile.nodes[0].childImageSharp.gatsbyImageData
-  console.log("🚀  TESTY:  : IndexPage : data", heroData)
+  const whatsOnEvents = data.whatson.nodes
+
   return (
     <Layout>
       <Seo title="Home" />
@@ -57,9 +77,7 @@ const IndexPage = () => {
         <p className="uppercase mx-12">
           Open now for dine-in, delivery and pick-up
         </p>
-        <button className="uppercase flex items-center px-3 py-2 text-black border border-black rounded hover:text-white hover:border-jeans hover:bg-jeans m-auto mt-8">
-          Make a booking
-        </button>
+        <Button label="Make Booking" />
       </div>
       <div className="container m-auto flex flex-col justify-center items-center md:justify-between md:flex-row w-full h-full px-2">
         <div className="flex-1 mr-2 bg-offWhite p-3 rounded-md shadow">
@@ -135,40 +153,16 @@ const IndexPage = () => {
       </div>
       <div className="">
         <h1 className="mt-12 pl-2">What's On</h1>
-        <div className="flex flex-col md:flex-row justify-around mt-8 px-2">
-          <div className="p-2 flex-1 rounded shadow border my-4 md:my-0">
-            <h3>Thirsty Thurdays</h3>
-            <p>12th May 22</p>
-            <p className="text-sm mt-4">
-              Aliquip nulla adipisicing ad sint anim irure reprehenderit ullamco
-              ipsum reprehenderit pariatur consectetur anim.
-            </p>
-            <button className="uppercase flex items-center px-3 py-2 text-black border border-black rounded hover:text-white hover:border-jeans hover:bg-jeans m-auto mt-8">
-              Make a booking
-            </button>
-          </div>
-          <div className="p-2 flex-1 rounded shadow border mx-0 md:mx-2 my-4 md:my-0">
-            <h3>Sinatra Sundays</h3>
-            <p>12th May 22</p>
-            <p className="text-sm mt-4">
-              Aliquip nulla adipisicing ad sint anim irure reprehenderit ullamco
-              ipsum reprehenderit pariatur consectetur anim.
-            </p>
-            <button className="uppercase flex items-center px-3 py-2 text-black border border-black rounded hover:text-white hover:border-jeans hover:bg-jeans m-auto mt-8">
-              Make a booking
-            </button>
-          </div>
-          <div className="p-2 flex-1 rounded shadow border my-4 md:my-0 ">
-            <h3>Laneway Sessions</h3>
-            <p>12th May 22</p>
-            <p className="text-sm mt-4">
-              Aliquip nulla adipisicing ad sint anim irure reprehenderit ullamco
-              ipsum reprehenderit pariatur consectetur anim.
-            </p>
-            <button className="uppercase flex items-center px-3 py-2 text-black border border-black rounded hover:text-white hover:border-jeans hover:bg-jeans m-auto mt-8">
-              Make a booking
-            </button>
-          </div>
+        <div className="flex flex-col md:flex-row justify-between h-full mt-8 px-2">
+          {whatsOnEvents &&
+            whatsOnEvents.map(event => (
+              <Event
+                title={event.title}
+                description={event.description}
+                date={event.date}
+                image={event.image}
+              />
+            ))}
         </div>
       </div>
     </Layout>

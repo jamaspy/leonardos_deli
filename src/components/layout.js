@@ -27,7 +27,7 @@ const Layout = ({ children }) => {
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
       <div
-        className="flex flex-col justify-between"
+        className="flex flex-col justify-between min-h-screen bg-red-500"
         style={
           {
             //  margin: `0 auto`,
@@ -37,7 +37,7 @@ const Layout = ({ children }) => {
         }
       >
         <main className="container m-auto">{children}</main>
-        <footer className="text-center  text-xs mt-12 pb-8 flex flex-col w-full">
+        <footer className="text-center text-xs mt-12 pb-8 flex flex-col w-full">
           <div className="mb-4">
             <p>Mon: Closed</p>
             <div className="flex flex-row w-full items-center justify-center">

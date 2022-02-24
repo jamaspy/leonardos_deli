@@ -7,6 +7,7 @@ module.exports = {
       colors: {
         jeans: "#203B5C",
         offWhite: "#F5F5F5",
+        oliveGreen: "#DBE4E2",
       },
     },
   },
