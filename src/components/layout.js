@@ -27,10 +27,10 @@ const Layout = ({ children }) => {
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
       <div
-        className="flex flex-col justify-between min-h-screen bg-red-500"
+        className="flex flex-col justify-between"
         style={
           {
-            //  margin: `0 auto`,
+            // margin: `0 auto`,
             // maxWidth: 960,
             // padding: `0 1.0875rem 1.45rem`,
           }

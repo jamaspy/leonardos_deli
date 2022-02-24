@@ -5,7 +5,7 @@ interface IProps {
   clickFn?: () => void
 }
 
-const Button = ({ label, clickFn }) => {
+const Button = ({ label, clickFn }: IProps) => {
   return (
     <button
       onClick={clickFn}
