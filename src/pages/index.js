@@ -6,8 +6,9 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { FiChevronsRight } from "react-icons/fi"
-import Event from "../components/Event"
 import Button from "../components/Button"
+import WhatsOn from "../components/WhatsOn"
+import ProductBox from "../components/Home/ProductBox"
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
     {
@@ -59,7 +60,6 @@ const IndexPage = () => {
 
   const heroData = data.web.nodes[0].childImageSharp.gatsbyImageData
   const heroMobileData = data.mobile.nodes[0].childImageSharp.gatsbyImageData
-  const whatsOnEvents = data.whatson.nodes
 
   return (
     <Layout>
@@ -79,6 +79,7 @@ const IndexPage = () => {
         </p>
         <Button label="Make Booking" />
       </div>
+
       <div className="container m-auto flex flex-col justify-center items-center md:justify-between md:flex-row w-full h-full px-2">
         <div className="flex-1 mr-2 bg-offWhite p-3 rounded-md shadow">
           <div className="border-2 border-black p-3 flex flex-col items-center">
@@ -151,20 +152,7 @@ const IndexPage = () => {
           IMAGE
         </div>
       </div>
-      <div className="">
-        <h1 className="mt-12 pl-2">What's On</h1>
-        <div className="flex flex-col md:flex-row justify-between h-full mt-8 px-2">
-          {whatsOnEvents &&
-            whatsOnEvents.map(event => (
-              <Event
-                title={event.title}
-                description={event.description}
-                date={event.date}
-                image={event.image}
-              />
-            ))}
-        </div>
-      </div>
+      <WhatsOn />
     </Layout>
   )
 }

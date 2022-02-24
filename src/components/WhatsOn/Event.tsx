@@ -1,7 +1,7 @@
 import React from "react"
-import { formatDate } from "../utils/dateFormatter"
+import { formatDate } from "../../utils/dateFormatter"
 import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
-import Button from "./Button"
+import Button from "../Button"
 interface IProps {
   title: string
   description: string
