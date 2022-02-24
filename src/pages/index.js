@@ -35,23 +35,6 @@ const IndexPage = () => {
           }
         }
       }
-      whatson: allContentfulEvent {
-        nodes {
-          title
-          date
-          description
-          image {
-            gatsbyImageData(
-              quality: 100
-              width: 300
-              height: 300
-              placeholder: TRACED_SVG
-              formats: [AUTO, WEBP, AVIF]
-              # layout: FULL_WIDTH
-            )
-          }
-        }
-      }
     }
   `)
 

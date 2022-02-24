@@ -6,7 +6,7 @@ import { GatsbyImage } from "gatsby-plugin-image"
 import { FiChevronsRight } from "react-icons/fi"
 import { Link } from "gatsby"
 
-const ProductBox = ({ title, description, image }) => {
+const ProductBox = ({ title, description, image, isLeft }) => {
   const data = useStaticQuery(graphql`
     {
       meat: allFile(filter: { name: { eq: "meat_a" } }) {
@@ -73,7 +73,12 @@ const ProductBox = ({ title, description, image }) => {
   }
   return (
     <div className="container m-auto flex flex-col justify-center items-center md:justify-between md:flex-row w-full h-full px-2">
-      <div className="flex-1 ml-2 bg-offWhite p-3 rounded-md shadow">
+      {isLeft && (
+        <div className="hidden md:flex flex-1 ml-2 bg-slate-900 text-white text-center w-full">
+          IMAGE
+        </div>
+      )}
+      <div className="flex-1 ml-2 bg-offWhite p-3 rounded-md shadow my-4">
         <div className="border-2 border-black p-3 flex flex-col items-center">
           <div className="w-24 h-24">{renderImage()}</div>
 
@@ -88,9 +93,11 @@ const ProductBox = ({ title, description, image }) => {
           </Link>
         </div>
       </div>
-      <div className="hidden md:flex flex-1 ml-2 bg-slate-900 text-white text-center w-full">
-        IMAGE
-      </div>
+      {!isLeft && (
+        <div className="hidden md:flex flex-1 ml-2 bg-slate-900 text-white text-center w-full">
+          IMAGE
+        </div>
+      )}
     </div>
   )
 }

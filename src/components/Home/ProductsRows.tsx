@@ -10,6 +10,7 @@ const ProductsRows = () => {
             title={product.title}
             description={product.description}
             image={product.image}
+            isLeft={product.isLeft}
           />
         ))}
     </div>
