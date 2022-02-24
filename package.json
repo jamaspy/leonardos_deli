@@ -5,6 +5,7 @@
   "version": "0.3.0",
   "author": "Kostas Vrouvas <hello@kosvrouvas.com>",
   "dependencies": {
+    "@react-google-maps/api": "^2.7.0",
     "autoprefixer": "^10.4.2",
     "gatsby": "^4.5.3",
     "gatsby-plugin-google-analytics": "^4.0.0",
