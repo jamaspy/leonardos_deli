@@ -72,19 +72,24 @@ const ProductBox = ({ title, description, image }) => {
     }
   }
   return (
-    <div className="flex-1 ml-2 bg-offWhite p-3 rounded-md shadow">
-      <div className="border-2 border-black p-3 flex flex-col items-center">
-        <div className="w-24 h-24">{renderImage()}</div>
+    <div className="container m-auto flex flex-col justify-center items-center md:justify-between md:flex-row w-full h-full px-2">
+      <div className="flex-1 ml-2 bg-offWhite p-3 rounded-md shadow">
+        <div className="border-2 border-black p-3 flex flex-col items-center">
+          <div className="w-24 h-24">{renderImage()}</div>
 
-        <h1 className="uppercase mb-6">{title}</h1>
-        <p>{description}</p>
-        <Link
-          to="/menu"
-          className="self-start flex flex-row items-center justify-center mt-6 text-gray-700 hover:text-jeans hover:cursor-pointer"
-        >
-          <h3 className="uppercase">See Menu</h3>
-          <FiChevronsRight className="ml-2" />
-        </Link>
+          <h1 className="uppercase mb-6">{title}</h1>
+          <p>{description}</p>
+          <Link
+            to="/menu"
+            className="self-start flex flex-row items-center justify-center mt-6 text-gray-700 hover:text-jeans hover:cursor-pointer"
+          >
+            <h3 className="uppercase">See Menu</h3>
+            <FiChevronsRight className="ml-2" />
+          </Link>
+        </div>
+      </div>
+      <div className="hidden md:flex flex-1 ml-2 bg-slate-900 text-white text-center w-full">
+        IMAGE
       </div>
     </div>
   )
