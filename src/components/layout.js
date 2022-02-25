@@ -30,14 +30,14 @@ const Layout = ({ children }) => {
         className="flex flex-col justify-between"
         style={
           {
-            //  margin: `0 auto`,
+            // margin: `0 auto`,
             // maxWidth: 960,
             // padding: `0 1.0875rem 1.45rem`,
           }
         }
       >
         <main className="container m-auto">{children}</main>
-        <footer className="text-center  text-xs mt-12 pb-8 flex flex-col w-full">
+        <footer className="text-center text-xs mt-12 pb-8 flex flex-col w-full">
           <div className="mb-4">
             <p>Mon: Closed</p>
             <div className="flex flex-row w-full items-center justify-center">
