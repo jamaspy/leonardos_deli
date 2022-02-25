@@ -25,7 +25,7 @@ function MyComponent({ lat, lng }) {
     googleMapsApiKey: "AIzaSyC74nQqjNRPIiNGvari1jL9xzb9MEbr2Vc",
   })
 
-  if (loadError || (!isBrowser && !window?.google)) {
+  if (loadError || !isBrowser) {
     return <div>Oops, Map cannot be loaded right now, sorry.</div>
   }
 
