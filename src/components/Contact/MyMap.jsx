@@ -20,16 +20,18 @@ function MyComponent({ lat, lng }) {
     console.log("marker: ", marker)
   }
 
+  const key = process.env.GATSBY_GOOGLE_MAPS_API_KEY
+  const isBrowser = typeof window !== "undefined"
   const { isLoaded, loadError } = useJsApiLoader({
-    googleMapsApiKey: "AIzaSyC74nQqjNRPIiNGvari1jL9xzb9MEbr2Vc", // ,
-    // ...otherOptions
+    googleMapsApiKey: "AIzaSyC74nQqjNRPIiNGvari1jL9xzb9MEbr2Vc",
   })
 
-  if (loadError || !window?.google) {
+  if (loadError || (!isBrowser && !window?.google)) {
     return <div>Oops, Map cannot be loaded right now, sorry.</div>
   }
 
   return (
+    isBrowser &&
     isLoaded && (
       <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={17}>
         <Marker onLoad={onLoad} position={center} />
