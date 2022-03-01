@@ -10,10 +10,10 @@ function Header({ siteTitle }) {
     <nav className="flex flex-wrap items-center justify-between p-4 bg-white">
       <div className="container m-auto">
         <div className="lg:hidden w-full flex items-center justify-between">
-          <div className="flex flex-col items-center justify-center">
+          <Link to="/" className="flex flex-col items-center justify-center">
             <StaticImage src="../images/Logo_Black.svg" width="110" />
             <p className="text-gray-700 mt-1 text-xs">Avalon Beach</p>
-          </div>
+          </Link>
           <button
             onClick={() => toggleExpansion(!isExpanded)}
             className="flex items-center px-3 py-2 text-black border border-black rounded hover:text-jeans hover:border-jeans hover:border-b hover:border-b-jeans"

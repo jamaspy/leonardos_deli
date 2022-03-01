@@ -5,11 +5,8 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     title: `Leonardo's`,
-    description: `Kick off your next, great Gatsby project with this default starter with TailwindCSS and common dev tools. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    description: `New deli and bar in Avalon Beach hosting live music Thrsday, Friday and Saturday at 1 Simmonds Lane`,
     author: `@jamstackjimmy`,
-  },
-  flags: {
-    THE_FLAG: false,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
