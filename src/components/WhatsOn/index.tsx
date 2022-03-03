@@ -27,8 +27,17 @@ const WhatsOn = () => {
 
   const whatsOnEvents = data.whatson.nodes
   return (
-    <div>
-      <h1 className="mt-12 pl-2">What's On</h1>
+    <div className="w-full mt-24">
+      <div
+        className="bg-oliveGreen py-4 ml-4 xl:ml-0"
+        style={{
+          width: "40%",
+          clipPath: "polygon(0 0, 100% 0, 96% 100%, 0% 100%)",
+        }}
+      >
+        <p className="pl-4 md:text-4xl uppercase ">What's On</p>
+      </div>
+
       <div className="flex flex-col md:flex-row justify-between h-full mt-8 px-2">
         {whatsOnEvents &&
           whatsOnEvents.map(event => (
