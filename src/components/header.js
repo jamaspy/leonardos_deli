@@ -75,6 +75,9 @@ function Header({ siteTitle }) {
             >
               Contact
             </Link>
+            <p className="block mt-4 mr-6 text-gray-700 lg:inline-block lg:mt-0 hover:text-jeans hover:underline">
+              Shop <span className="text-xs">(coming soon)</span>
+            </p>
           </div>
           <Link
             to={`/`}
