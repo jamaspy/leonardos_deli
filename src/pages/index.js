@@ -2,7 +2,7 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import { GatsbyImage, StaticImage } from "gatsby-plugin-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import Button from "../components/Button"
 import WhatsOn from "../components/WhatsOn"
 import ProductsRows from "../components/Home/ProductsRows"
@@ -170,6 +170,7 @@ const IndexPage = () => {
         <ProductsRows />
       </div>
       {/* MOBILE PRODUCT LISTING END */}
+
       {/* TABLET+ PRODUCT LISTING START */}
       <div className="hidden md:block">
         <div className="bg-offWhite flex flex-row w-full mt-8 shadow-md">
