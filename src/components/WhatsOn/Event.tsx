@@ -6,11 +6,13 @@ interface IProps {
   title: string
   description: string
   date: string
+  freeTextDate: string
   image: IGatsbyImageData
 }
 
-const Event = ({ title, description, date, image }: IProps) => {
+const Event = ({ title, description, date, freeTextDate, image }: IProps) => {
   const eventImage = image.gatsbyImageData
+
   return (
     <div
       className="flex-1 flex flex-col justify-between p-3 rounded shadow-md border mx-auto md:mx-2 my-4 md:my-0 "
@@ -26,7 +28,9 @@ const Event = ({ title, description, date, image }: IProps) => {
       <div className="flex flex-col justify-between h-full">
         <div className="">
           <h3 className="mt-6">{title}</h3>
-          <p className="mt-2">{formatDate(date)}</p>
+          <p className="mt-2">
+            {date !== null ? formatDate(date) : freeTextDate}
+          </p>
         </div>
         <div className="h-full">
           <p className="text-sm mt-4">{description}</p>

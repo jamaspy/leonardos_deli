@@ -9,6 +9,7 @@ const WhatsOn = () => {
         nodes {
           title
           date
+          freeTextDate
           description
           image {
             gatsbyImageData(
@@ -26,6 +27,7 @@ const WhatsOn = () => {
   `)
 
   const whatsOnEvents = data.whatson.nodes
+
   return (
     <div className="w-full mt-24">
       <div
@@ -45,6 +47,7 @@ const WhatsOn = () => {
               title={event.title}
               description={event.description}
               date={event.date}
+              freeTextDate={event.freeTextDate}
               image={event.image}
             />
           ))}
