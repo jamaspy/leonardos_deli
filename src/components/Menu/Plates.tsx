@@ -4,12 +4,10 @@ import { StaticImage } from "gatsby-plugin-image"
 const Plates = ({ menuData }) => {
   return (
     <div className="shadow flex-1 text-center rounded-md mx-1 bg-oliveGreen p-4 mt-2">
-      <StaticImage src="../../images/sides_3.png" width={100} alt="cheese" />
-
+      <StaticImage src="../../images/sides_3.png" width={100} alt="bread" />
       <div className="flex flex-col md:flex-row  md:mr-8">
         <div className="flex-1">
           <h1 className="mb-3 text-center">Plates</h1>
-
           {menuData &&
             menuData.plates.map(plate => (
               <div className="w-full flex justify-between flex-row">
