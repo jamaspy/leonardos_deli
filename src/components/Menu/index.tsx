@@ -1,9 +1,11 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import Cheeses from "./Cheeses"
-import Meats from "./Meats"
+import CheeseMeatPlates from "./CheesesMeatPlates"
+import Sweets from "./Sweets"
 import Plates from "./Plates"
 import Sides from "./Sides"
+import Salads from "./Salads"
+import Toasties from "./Toasties"
 import Bubbly from "./Bubbly"
 import Cocktails from "./Cocktails"
 import RedWine from "./RedWine"
@@ -15,11 +17,7 @@ const Menu = () => {
     {
       foodmenu: allContentfulFoodMenuMenuJsonNode {
         nodes {
-          cheeses {
-            name
-            price
-          }
-          meats {
+          cheesemeatplates {
             price
             name
           }
@@ -28,6 +26,14 @@ const Menu = () => {
             price
           }
           sides {
+            name
+            price
+          }
+          sweet {
+            name
+            price
+          }
+          salads {
             name
             price
           }
@@ -82,18 +88,26 @@ const Menu = () => {
     }
   `)
   const foodMenuData = data.foodmenu.nodes[0]
+
   const drinksMenuData = data.drinksmenu.edges[0].node
 
   return (
     <>
       <div className="flex flex-col md:flex-row w-full h-full">
-        <Cheeses menuData={foodMenuData.cheeses} />
-        <Meats menuData={foodMenuData.meats} />
-        <Sides menuData={foodMenuData.sides} />
+        <CheeseMeatPlates menuData={foodMenuData.cheesemeatplates} />
       </div>
       <div className="">
         <Plates menuData={foodMenuData} />
       </div>
+      <div className="">
+        <Salads menuData={foodMenuData.salads} />
+      </div>
+      <div className="flex flex-col md:flex-row w-full h-full">
+        <Sides menuData={foodMenuData.sides} />
+        <Toasties menuData={foodMenuData.toasties_and_baguettes} />
+        <Sweets menuData={foodMenuData.sweet} />
+      </div>
+      <h1>Drink</h1>
       <div className="flex flex-col md:flex-row w-full h-full">
         <Bubbly menuData={drinksMenuData.bubbles} />
         <WhiteWine menuData={drinksMenuData.white} />
