@@ -172,7 +172,7 @@ const IndexPage = () => {
       {/* MOBILE PRODUCT LISTING END */}
 
       {/* TABLET+ PRODUCT LISTING START */}
-      <div className="hidden md:block">
+      <div className="hidden md:block md:px-4 lg:px-0 ">
         <div className="bg-offWhite flex flex-row w-full mt-8 shadow-md">
           <div
             className="grid"
@@ -190,30 +190,31 @@ const IndexPage = () => {
               layout="fullWidth"
             />
           </div>
-          <div className="flex-1  w-full text-center flex items-center flex-col justify-center px-2">
+          <div className="flex-1  w-full text-center flex items-center flex-col justify-center px-4">
             <div className="xl:w-40 xl:h-40 md:w-24 md:h-24">
               {renderImage("cheese")}
             </div>
             <h1 className="uppercase mb-3">Cheese</h1>
             <p className="text-xs lg:text-base">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Accusantium dolorum explicabo, fuga optio ullam aliquid eum
-              asperiores soluta unde. Ipsa facere esse fuga beatae similique
-              doloremque aut voluptatibus distinctio atque.
+              A changing selection of local and international cheeses from the
+              best producers. We balance our menu between what you expect
+              (parmigiano, cheddar, brie, comte) and what will surprise you
+              (blue cashel, rogue river blue, wyngaard semi-hard goat, espresso
+              rubbed American cheddar).
             </p>
           </div>
         </div>
-        <div className="bg-oliveGreen flex flex-row w-full mt-24 shadow-md">
-          <div className="flex-1  w-full text-center flex items-center flex-col justify-center px-2">
+        <div className="bg-oliveGreen flex flex-row w-full mt-12 shadow-md">
+          <div className="flex-1  w-full text-center flex items-center flex-col justify-center px-4">
             <div className="xl:w-40 xl:h-40 md:w-24 md:h-24">
               {renderImage("meat")}
             </div>
             <h1 className="uppercase mb-3">Meat</h1>
             <p className="text-xs lg:text-base">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Accusantium dolorum explicabo, fuga optio ullam aliquid eum
-              asperiores soluta unde. Ipsa facere esse fuga beatae similique
-              doloremque aut voluptatibus distinctio atque.
+              World-class meats from a select group of producers. Everything
+              from mortadella and salamis to wagyu bresaola and iberico. Light,
+              subtle, strong and spicy flavours are all found here. Our vintage
+              meat slicer is worth the trip, everything is cut fresh.
             </p>
           </div>
 
@@ -236,7 +237,7 @@ const IndexPage = () => {
             </div>
           </div>
         </div>
-        <div className="bg-offWhite flex flex-row w-full mt-24 shadow-md">
+        <div className="bg-offWhite flex flex-row w-full mt-12 shadow-md">
           <div
             className="grid"
             style={{
@@ -257,12 +258,13 @@ const IndexPage = () => {
             <div className="xl:w-40 xl:h-40 md:w-24 md:h-24">
               {renderImage("wine")}
             </div>
-            <h1 className="uppercase mb-3">Wine</h1>
+            <h1 className="uppercase mb-3">Drinks</h1>
             <p className="text-xs lg:text-base">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Accusantium dolorum explicabo, fuga optio ullam aliquid eum
-              asperiores soluta unde. Ipsa facere esse fuga beatae similique
-              doloremque aut voluptatibus distinctio atque.
+              Classic cocktails include our signature olive brine and cold brew
+              martini. Our wine list changes with seasons to reflect the best
+              local and international producers. Something for everyone across
+              taste and budget, beers too. Our non-alcoholic range is curated
+              and delicious.
             </p>
           </div>
         </div>

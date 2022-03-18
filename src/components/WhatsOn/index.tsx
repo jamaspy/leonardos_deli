@@ -29,7 +29,7 @@ const WhatsOn = () => {
   const whatsOnEvents = data.whatson.nodes
 
   return (
-    <div className="w-full mt-24">
+    <div className="w-full lg:mt-24 md:mt-12 mt-8">
       <div
         className="bg-oliveGreen py-4 ml-4 xl:ml-0"
         style={{
