@@ -2,7 +2,7 @@ import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 const WhiteWine = ({ menuData }) => {
   return (
-    <div className="shadow flex-1 text-center rounded-md mx-1 bg-offWhite p-4 mt-2">
+    <div className="shadow flex-1 text-center rounded-md mx-1 bg-offWhite p-4 mt-2 lg:mt-1 lg:mr-2">
       <div className="flex items-center justify-center">
         <StaticImage src="../../images/drinks_1.png" width={100} alt="Wine" />
       </div>

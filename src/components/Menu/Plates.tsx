@@ -16,7 +16,7 @@ const Plates = ({ menuData }) => {
               </div>
             ))}
           <p className="text-left mt-2 md:mt-8 text-xs">
-            All plates served with a choice of Coronations(pickles) or Piparras
+            All plates served with a choice of Coronations (pickles) or Piparras
             (pickled chillies)
           </p>
         </div>
