@@ -9,7 +9,7 @@ const RedWine = ({ menuData }) => {
       <h1 className="text-center">Red Wine</h1>
       {menuData &&
         menuData.map(wine => (
-          <div className="w-full flex justify-between flex-row">
+          <div className="w-full flex justify-between flex-row mb-4">
             <div className="flex flex-col items-start justify-start">
               <p>{wine.name}</p>
               <div className="flex flex-row text-xs">
@@ -18,7 +18,7 @@ const RedWine = ({ menuData }) => {
               </div>
             </div>
             <p>
-              {wine.glass_price || " "} | {wine.bottle_price || " "}
+              {wine.glass_price || "-"} | {wine.bottle_price || " "}
             </p>
           </div>
         ))}

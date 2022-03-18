@@ -56,6 +56,7 @@ const Menu = () => {
             cocktails {
               glass_price
               name
+              parts
             }
             red {
               bottle_price
@@ -107,16 +108,16 @@ const Menu = () => {
         <Toasties menuData={foodMenuData.toasties_and_baguettes} />
         <Sweets menuData={foodMenuData.sweet} />
       </div>
-      <h1>Drink</h1>
+      <div className="h-8"></div>
       <div className="flex flex-col md:flex-row w-full h-full">
         <Bubbly menuData={drinksMenuData.bubbles} />
-        <WhiteWine menuData={drinksMenuData.white} />
-      </div>
-      <div className="flex flex-col md:flex-row w-full h-full">
-        <RedWine menuData={drinksMenuData.red} />
         <RoseNaturalWine menuData={drinksMenuData.rose_and_natural} />
       </div>
-      <Cocktails menuData={drinksMenuData} />
+      <div className="flex flex-col md:flex-row w-full h-full">
+        <WhiteWine menuData={drinksMenuData.white} />
+        <RedWine menuData={drinksMenuData.red} />
+      </div>
+      <Cocktails menuData={drinksMenuData.cocktails} />
 
       <Button label="Make Booking" />
     </>
