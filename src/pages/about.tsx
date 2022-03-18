@@ -42,7 +42,7 @@ const About = () => {
   return (
     <Layout>
       <SEO title="About" />
-      <div className="container px-4 md:px-0">
+      <div className="container px-4 lg:px-0">
         <div className="hidden md:block">
           <GatsbyImage image={heroData} alt={`leo store front`} />
         </div>

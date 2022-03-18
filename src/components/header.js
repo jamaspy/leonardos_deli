@@ -35,14 +35,13 @@ function Header({ siteTitle }) {
           } w-full block flex-grow lg:flex lg:items-center lg:justify-between lg:w-auto`}
         >
           <div className="text-sm lg:flex-1 text-center lg:text-left uppercase">
-            {/* <Link
+            <Link
               to={`/`}
               href="#responsive-header"
               className="block mt-4 mr-6 text-gray-700 lg:inline-block lg:mt-0 hover:text-black"
             >
-              Shop
-            </Link> */}
-
+              Home
+            </Link>
             <Link
               to={`/about`}
               className="block mt-4 mr-6 text-gray-700 lg:inline-block lg:mt-0 hover:text-jeans hover:underline"

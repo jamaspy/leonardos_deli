@@ -6,11 +6,11 @@ const Sides = ({ menuData }) => {
       <div className="flex items-center justify-center">
         <StaticImage src="../../images/sides_2.png" width={100} alt="sides" />
       </div>
-      <h1 className="text-center">Sides</h1>
+      <h1 className="text-center mb-4">Sides</h1>
 
       {menuData &&
         menuData.map(side => (
-          <div className="w-full flex justify-between flex-row">
+          <div className="w-full flex justify-between flex-row mb-2">
             <p>{side.name}</p>
             <p>{side.price}</p>
           </div>
