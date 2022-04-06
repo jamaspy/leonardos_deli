@@ -1,12 +1,12 @@
 import React from "react"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import MyMap from "../components/Contact/MyMap"
 import { BsPhoneVibrate } from "react-icons/bs"
 const Contact = () => {
   return (
     <Layout>
-      <SEO title="Contact" />
+      <Seo title="Contact" />
       <MyMap lat={-33.63688594503681} lng={151.32926023619473} />
       <hr className="mt-12" />
       <h3 className="text-center mt-8">1 Simmonds Lane,</h3>

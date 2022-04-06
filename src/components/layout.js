@@ -52,9 +52,7 @@ const Layout = ({ children }) => {
           </div>
           <div className="">
             {" "}
-            © {new Date().getFullYear()}, Built with
-            {` `}
-            <a href="https://www.gatsbyjs.org">Gatsby</a> by{" "}
+            © {new Date().getFullYear()}, Built by{" "}
             <a href="https://www.dapperdesigner.com">dapper_designer</a>
           </div>
           <div className="flex flex-row items-center justify-center mt-3 text-lg">

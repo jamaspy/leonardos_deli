@@ -55,6 +55,12 @@ function Header({ siteTitle }) {
               Menu
             </Link>
             <Link
+              to={`/catering`}
+              className="block mt-4 mr-6 text-gray-700 lg:inline-block lg:mt-0 hover:text-jeans hover:underline"
+            >
+              Catering
+            </Link>
+            <Link
               to={`/whatson`}
               className="block mt-4 mr-6 text-gray-700 lg:inline-block lg:mt-0 hover:text-jeans hover:underline"
             >
@@ -74,9 +80,10 @@ function Header({ siteTitle }) {
             >
               Contact
             </Link>
-            <p className="block mt-4 mr-6 text-gray-700 lg:inline-block lg:mt-0 hover:text-jeans hover:underline">
+            {/* SHOP LINK  */}
+            {/* <p className="block mt-4 mr-6 text-gray-700 lg:inline-block lg:mt-0 hover:text-jeans hover:underline">
               Shop <span className="text-xs">(coming soon)</span>
-            </p>
+            </p> */}
           </div>
           <Link
             to={`/`}
