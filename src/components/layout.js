@@ -41,13 +41,13 @@ const Layout = ({ children }) => {
           <div className="mb-4">
             <p>Mon: Closed</p>
             <div className="flex flex-row w-full items-center justify-center">
-              <p className="mr-2">Tues/Weds: 11-7</p>
-              <p className="mr-2">Thurs: 11-9</p>
+              <p className="mr-2">Tues/Weds: 12-8</p>
+              <p className="mr-2">Thurs: 12-10</p>
             </div>
             <div className="flex flex-row w-full items-center justify-center">
-              <p className="mr-2">Fri: 11-10</p>
-              <p className="mr-2">Sat: 10-10</p>
-              <p className="mr-2">Sun: 10-4</p>
+              <p className="mr-2">Fri: 12-10</p>
+              <p className="mr-2">Sat: 11-10</p>
+              <p className="mr-2">Sun: 12-4</p>
             </div>
           </div>
           <div className="">

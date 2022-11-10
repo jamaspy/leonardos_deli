@@ -2,8 +2,8 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React, { useState } from "react"
 import { StaticImage } from "gatsby-plugin-image"
-// import { BsCart3 } from "react-icons/bs"
-function Header({ siteTitle }) {
+
+function Header() {
   const [isExpanded, toggleExpansion] = useState(false)
 
   return (
