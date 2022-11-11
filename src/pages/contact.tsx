@@ -1,8 +1,8 @@
 import React from "react"
+import { BsPhoneVibrate } from "react-icons/bs"
+import MyMap from "../components/Contact/MyMap"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import MyMap from "../components/Contact/MyMap"
-import { BsPhoneVibrate } from "react-icons/bs"
 const Contact = () => {
   return (
     <Layout>
@@ -17,12 +17,12 @@ const Contact = () => {
 
       <div className="mt-8 flex flex-col items-center justify-center">
         <p className="">Monday: Closed</p>
-        <p className="">Tuesday: 11:00am - 7:00pm</p>
-        <p className="">Wednesday: 11:00am - 7:00pm</p>
-        <p className="">Thursday: 11:00am - 9:00pm</p>
-        <p className="">Friday: 11:00am - 10:00pm</p>
-        <p className="">Saturday: 10:00am - 10:00pm</p>
-        <p className="">Sunday: 10:00am - 4:00pm</p>
+        <p className="">Tuesday: 12:00pm - 8:00pm</p>
+        <p className="">Wednesday: 12:00pm - 8:00pm</p>
+        <p className="">Thursday: 12:00pm - 10:00pm</p>
+        <p className="">Friday: 12:00pm - 10:00pm</p>
+        <p className="">Saturday: 11:00am - 10:00pm</p>
+        <p className="">Sunday: 12:00pm - 4:00pm</p>
       </div>
       <hr className="mt-8" />
     </Layout>

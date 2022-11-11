@@ -1,6 +1,6 @@
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
+import React from "react"
 import Event from "./Event"
 const WhatsOn = () => {
   const data = useStaticQuery(graphql`
@@ -39,8 +39,21 @@ const WhatsOn = () => {
       >
         <p className="pl-4 md:text-4xl uppercase ">What's On</p>
       </div>
+      <p className="mt-4 mx-3">
+        We’re so proud to be supporting live music; it’s so important for our
+        souls and our local musicians. We always have music on Friday nights and
+        some weeks on Thursdays, Saturdays or Sundays too. Our{" "}
+        <a
+          href="https://www.instagram.com/leonardosdeli/"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          Instagram{" "}
+        </a>
+        page is always up to date with the line-up for the week.
+      </p>
 
-      <div className="flex flex-col md:flex-row justify-between h-full mt-8 px-2">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 h-full mt-8 px-2">
         {whatsOnEvents &&
           whatsOnEvents.map(event => (
             <Event
