@@ -1,7 +1,7 @@
 import { graphql, useStaticQuery } from "gatsby"
 import React from "react"
 import Button from "../Button"
-import FoodMenuJSON from "../Menu/denienFoodMenu.json"
+import {foodMenu} from "../Menu/foodMenu"
 import Bubbly from "./Bubbly"
 import Cheeses from "./Cheeses"
 import CheeseMeatPlates from "./CheesesMeatPlates"
@@ -15,7 +15,7 @@ import Sweets from "./Sweets"
 import Toasties from "./Toasties"
 import WhiteWine from "./WhiteWine"
 const Menu = () => {
-  console.log(FoodMenuJSON)
+
   const data = useStaticQuery(graphql`
     {
       foodmenu: allContentfulFoodMenuMenuJsonNode {
@@ -98,21 +98,21 @@ const Menu = () => {
   return (
     <>
       <div className="flex flex-col w-full h-full">
-        <CheeseMeatPlates menuData={FoodMenuJSON.cheeseAndMeatPlates} />
+        <CheeseMeatPlates menuData={foodMenu.cheeseAndMeatPlates} />
       </div>
       <div className="">
-        <Plates menuData={FoodMenuJSON?.plates} />
+        <Plates menuData={foodMenu?.plates} />
       </div>
       <div className="">
-        <Salads menuData={FoodMenuJSON?.salads} />
+        <Salads menuData={foodMenu?.salads} />
       </div>
       <div className="flex flex-col md:flex-row w-full h-full">
-        <Sides menuData={FoodMenuJSON?.snacks} />
+        <Sides menuData={foodMenu?.snacks} />
         <Toasties menuData={foodMenuData.toasties_and_baguettes} />
-        <Sweets menuData={FoodMenuJSON?.sweet} />
+        <Sweets menuData={foodMenu?.sweet} />
       </div>
       <div className="flex flex-col w-full h-full">
-        <Cheeses menuData={FoodMenuJSON} />
+        <Cheeses menuData={foodMenu} />
       </div>
       <div className="h-8"></div>
       <div className="flex flex-col md:flex-row w-full h-full">
