@@ -1,5 +1,5 @@
-import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
+import React from "react"
 const Cheeses = ({ menuData }) => {
   return (
     <div className="shadow flex-1 rounded-md m-2 md:mx-2 bg-offWhite p-4 ">

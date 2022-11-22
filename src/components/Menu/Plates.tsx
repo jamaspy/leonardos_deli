@@ -1,5 +1,5 @@
-import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
+import React from "react"
 
 const Plates = ({ menuData }) => {
   return (
@@ -9,7 +9,7 @@ const Plates = ({ menuData }) => {
         <div className="flex-1 px-4">
           <h1 className="mb-4 text-center">Plates</h1>
           {menuData &&
-            menuData.plates.map(plate => (
+            menuData.map(plate => (
               <div className="w-full flex justify-between md:flex-row flex-col border-b md:border-0 mb-6 md:mb-2">
                 <p className="text-left">{plate.name}</p>
                 <p className="my-2 md:mt-0 text-right">{plate.price}</p>
