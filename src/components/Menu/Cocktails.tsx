@@ -12,10 +12,10 @@ const Plates = ({ menuData }) => {
             menuData.map(cocktail => (
               <div className="w-full flex justify-between flex-row mb-2">
                 <div className="flex flex-col w-full items-start text-left">
-                  <p>{cocktail.name}</p>
+                  <p className="md:text-base text-xs">{cocktail.name}</p>
                   <p className="text-xs">{cocktail.parts}</p>
                 </div>
-                <p className="ml-2 md:ml-0">{cocktail.glass_price}</p>
+                <p className="ml-2 md:ml-0 md:text-base text-xs">{cocktail.glass_price}</p>
               </div>
             ))}
         </div>

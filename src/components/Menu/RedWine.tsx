@@ -14,13 +14,13 @@ const {lightReds, mediumReds, fullReds} = menuData
         lightReds?.map(wine => (
           <div className="w-full flex justify-between flex-row mb-4">
             <div className="flex flex-col items-start justify-start">
-              <p>{wine.name}</p>
-              <div className="flex flex-row text-xs">
-                <p className="mr-2">{wine.region}</p>
-                <p>{wine.grape}</p>
+              <p className="text-left md:text-base text-xs font-bold">{wine.name}</p>
+              <div className="flex flex-row md:text-base text-xs">
+                <p className="mr-2 md:text-base text-xs">{wine.region}</p>
+                <p className="md:text-base text-xs">{wine.grape}</p>
               </div>
             </div>
-            <p>
+            <p className="md:text-base text-xs">
               {wine.glass_price || "-"} | {wine.bottle_price || " "}
             </p>
           </div>
@@ -30,13 +30,13 @@ const {lightReds, mediumReds, fullReds} = menuData
         mediumReds?.map(wine => (
           <div className="w-full flex justify-between flex-row mb-4">
             <div className="flex flex-col items-start justify-start">
-              <p>{wine.name}</p>
-              <div className="flex flex-row text-xs">
-                <p className="mr-2">{wine.region}</p>
-                <p>{wine.grape}</p>
+              <p className="text-left md:text-base text-xs font-bold">{wine.name}</p>
+              <div className="flex flex-row">
+                <p className="mr-2 md:text-base text-xs">{wine.region}</p>
+                <p className="md:text-base text-xs">{wine.grape}</p>
               </div>
             </div>
-            <p>
+            <p className="md:text-base text-xs">
               {wine.glass_price || "-"} | {wine.bottle_price || " "}
             </p>
           </div>
@@ -46,13 +46,13 @@ const {lightReds, mediumReds, fullReds} = menuData
             fullReds?.map(wine => (
                 <div className="w-full flex justify-between flex-row mb-4">
                     <div className="flex flex-col items-start justify-start">
-                        <p>{wine.name}</p>
-                        <div className="flex flex-row text-xs">
-                            <p className="mr-2">{wine.region}</p>
-                            <p>{wine.grape}</p>
+                        <p className="text-left md:text-base text-xs font-bold">{wine.name}</p>
+                        <div className="flex flex-row">
+                            <p className="mr-2 md:text-base text-xs">{wine.region}</p>
+                            <p className="md:text-base text-xs">{wine.grape}</p>
                         </div>
                     </div>
-                    <p>
+                    <p className="md:text-base text-xs">
                         {wine.glass_price || "-"} | {wine.bottle_price || " "}
                     </p>
                 </div>

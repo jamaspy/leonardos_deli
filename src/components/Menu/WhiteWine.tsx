@@ -13,13 +13,13 @@ const WhiteWine = ({ menuData }) => {
         crispWhite.map(wine => (
           <div className="w-full flex justify-between flex-row mb-4">
             <div className="flex flex-col items-start justify-start">
-              <p>{wine.name}</p>
+              <p className="text-left md:text-base text-xs font-bold">{wine.name}</p>
               <div className="flex flex-row text-xs">
-                <p className="mr-2">{wine.grape}</p>
-                <p className="">{wine.region}</p>
+                <p className="mr-2 text-left md:text-base text-xs">{wine.grape}</p>
+                <p className="text-left md:text-base text-xs">{wine.region}</p>
               </div>
             </div>
-            <p>
+            <p className="text-xs md:text-base">
               {wine.glass_price || " "} | {wine.bottle_price || " "}
             </p>
           </div>
@@ -29,13 +29,13 @@ const WhiteWine = ({ menuData }) => {
             richWhite.map(wine => (
                 <div className="w-full flex justify-between flex-row mb-4">
                     <div className="flex flex-col items-start justify-start">
-                        <p>{wine.name}</p>
+                        <p className="text-left md:text-base text-xs font-bold">{wine.name}</p>
                         <div className="flex flex-row text-xs">
-                            <p className="mr-2">{wine.grape}</p>
-                            <p className="">{wine.region}</p>
+                            <p className="mr-2 md:text-base text-xs">{wine.grape}</p>
+                            <p className="md:text-base text-xs">{wine.region}</p>
                         </div>
                     </div>
-                    <p>
+                    <p className="md:text-base text-xs">
                         {wine.glass_price || " "} | {wine.bottle_price || " "}
                     </p>
                 </div>
