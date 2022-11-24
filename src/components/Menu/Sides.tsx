@@ -11,7 +11,7 @@ const Sides = ({ menuData }) => {
       {menuData &&
         menuData.map(side => (
           <div className="w-full flex justify-between flex-row mb-2">
-            <p>{side.name}</p>
+            <p className="text-sm">{side.name}</p>
             <p>{side.price}</p>
           </div>
         ))}

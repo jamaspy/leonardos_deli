@@ -1,6 +1,7 @@
 import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 const Bubbly = ({ menuData }) => {
+    const {bubbles, rose} = menuData
   return (
     <div className="shadow flex-1 text-center rounded-md mx-1 bg-offWhite p-4 mt-2 lg:mr-2 lg:mb-2">
       <div className="flex items-center justify-center">
@@ -8,7 +9,7 @@ const Bubbly = ({ menuData }) => {
       </div>
       <h1 className="text-center mb-4">Bubbles</h1>
       {menuData &&
-        menuData.map(wine => (
+        bubbles.map(wine => (
           <div className="w-full flex justify-between flex-row mb-4">
             <div className="flex flex-col items-start justify-start">
               <p>{wine.name}</p>
@@ -22,6 +23,24 @@ const Bubbly = ({ menuData }) => {
             </p>
           </div>
         ))}
+        <div className="">
+            <h1 className="text-center mb-4">Rose</h1>
+            {menuData &&
+                rose.map(wine => (
+                    <div className="w-full flex justify-between flex-row mb-4">
+                        <div className="flex flex-col items-start justify-start">
+                            <p>{wine.name}</p>
+                            <div className="flex flex-row text-xs">
+                                <p className="mr-2">{wine.region}</p>
+                                <p>{wine.grape}</p>
+                            </div>
+                        </div>
+                        <p>
+                            {wine.glass_price || "-"} | {wine.bottle_price || " "}
+                        </p>
+                    </div>
+                ))}
+        </div>
     </div>
   )
 }

@@ -23,7 +23,7 @@ export const foodMenu = {
     ],
     "soupsBowlsSandwiches": [
         {
-            "name": "Sourdough toastie of the day (+ salami/ham $2)",
+            "name": "Sourdough toastie of the day [add salami/ham for $2]",
             "price": 15
         },
         {

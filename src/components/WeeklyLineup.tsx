@@ -8,23 +8,23 @@ const WeeklyLineup = () => {
     },
     {
       day: "Tuesday",
-      action: "Welcome Week Happy Hour 4:00pm - 5:00pm",
+      action: "Happy hour prices all day long",
     },
     {
       day: "Wednesday",
-      action: "Try New Cheese: Free cheese one us with every plate",
+      action: "Free cheese with every plate",
     },
     {
       day: "Thursday",
-      action: "Themed Night (eg Spanish, French, Italian)",
+      action: "Themed tasting night (eg Spanish, French, Italian)",
     },
     {
       day: "Friday",
-      action: " Live Music: 6:30pm to late",
+      action: " Live Music",
     },
     {
       day: "Saturday",
-      action: "Happy Hour 4:00pm - 6:00pm",
+      action: "Happy hours 4-5pm and 9-10pm",
     },
     {
       day: "Sunday",
@@ -46,7 +46,7 @@ const WeeklyLineup = () => {
 
       <div className="flex flex-col justify-between h-full mt-8 px-2">
         {lineup.map((day, index) => (
-          <div className="flex flex-col md:flex-row mb-2">
+          <div key={index} className="flex flex-col md:flex-row mb-2">
             <p className="text-xl font-semibold">{day.day}: </p>
             <p className="md:ml-4 text-sm md:text-lg">{day.action}</p>
           </div>

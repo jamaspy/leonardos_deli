@@ -10,7 +10,7 @@ const Toasties = ({ menuData }) => {
       {menuData &&
         menuData.map(toastie => (
           <div className="w-full flex justify-between flex-row mb-2">
-            <p>{toastie.name}</p>
+            <p className="text-left text-sm">{toastie.name}</p>
             <p>{toastie.price}</p>
           </div>
         ))}

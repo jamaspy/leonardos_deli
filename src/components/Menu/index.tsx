@@ -1,7 +1,7 @@
-import { graphql, useStaticQuery } from "gatsby"
 import React from "react"
 import Button from "../Button"
-import {foodMenu} from "../Menu/foodMenu"
+import {foodMenu} from "./foodMenu"
+import {drinksMenu} from "./drinksMenu";
 import Bubbly from "./Bubbly"
 import Cheeses from "./Cheeses"
 import CheeseMeatPlates from "./CheesesMeatPlates"
@@ -16,89 +16,12 @@ import Toasties from "./Toasties"
 import WhiteWine from "./WhiteWine"
 const Menu = () => {
 
-  const data = useStaticQuery(graphql`
-    {
-      foodmenu: allContentfulFoodMenuMenuJsonNode {
-        nodes {
-          cheesemeatplates {
-            price
-            name
-          }
-          plates {
-            name
-            price
-          }
-          sides {
-            name
-            price
-          }
-          sweet {
-            name
-            price
-          }
-          salads {
-            name
-            price
-          }
-          toasties_and_baguettes {
-            name
-            price
-          }
-        }
-      }
-      drinksmenu: allContentfulDrinksMenuDrinksMenuJsonNode {
-        edges {
-          node {
-            bubbles {
-              bottle_price
-              glass_price
-              grape
-              name
-              region
-            }
-            cocktails {
-              glass_price
-              name
-              parts
-            }
-            red {
-              bottle_price
-              glass_price
-              grape
-              name
-              region
-            }
-            rose_and_natural {
-              bottle_price
-              glass_price
-              grape
-              name
-              region
-            }
-            spirits {
-              glass_price
-              name
-            }
-            white {
-              bottle_price
-              glass_price
-              grape
-              name
-              region
-            }
-          }
-        }
-      }
-    }
-  `)
-  const foodMenuData = data.foodmenu.nodes[0]
 
-  const drinksMenuData = data.drinksmenu.edges[0].node
-
+console.log(foodMenu)
   return (
     <>
       <div className="flex flex-col w-full h-full">
-        <CheeseMeatPlates menuData={foodMenu.cheeseAndMeatPlates} />
+        <CheeseMeatPlates menuData={foodMenu?.cheeseAndMeatPlates} />
       </div>
       <div className="">
         <Plates menuData={foodMenu?.plates} />
@@ -108,7 +31,7 @@ const Menu = () => {
       </div>
       <div className="flex flex-col md:flex-row w-full h-full">
         <Sides menuData={foodMenu?.snacks} />
-        <Toasties menuData={foodMenuData.toasties_and_baguettes} />
+        <Toasties menuData={foodMenu?.soupsBowlsSandwiches} />
         <Sweets menuData={foodMenu?.sweet} />
       </div>
       <div className="flex flex-col w-full h-full">
@@ -116,14 +39,14 @@ const Menu = () => {
       </div>
       <div className="h-8"></div>
       <div className="flex flex-col md:flex-row w-full h-full">
-        <Bubbly menuData={drinksMenuData.bubbles} />
-        <RoseNaturalWine menuData={drinksMenuData.rose_and_natural} />
+        <Bubbly menuData={drinksMenu} />
+        <RoseNaturalWine menuData={drinksMenu} />
       </div>
       <div className="flex flex-col md:flex-row w-full h-full">
-        <WhiteWine menuData={drinksMenuData.white} />
-        <RedWine menuData={drinksMenuData.red} />
+        <WhiteWine menuData={drinksMenu} />
+        <RedWine menuData={drinksMenu} />
       </div>
-      <Cocktails menuData={drinksMenuData.cocktails} />
+      <Cocktails menuData={drinksMenu.cocktails} />
 
       <Button label="Make Booking" />
     </>
