@@ -1,7 +1,7 @@
 import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 const RoseNaturalWine = ({ menuData }) => {
-    console.log(menuData)
+
     const {natural} = menuData
   return (
     <div className="shadow flex-1 text-center rounded-md mx-1 bg-oliveGreen p-4 mt-2 lg:mb-2">

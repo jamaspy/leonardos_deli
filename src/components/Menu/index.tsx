@@ -15,9 +15,6 @@ import Sweets from "./Sweets"
 import Toasties from "./Toasties"
 import WhiteWine from "./WhiteWine"
 const Menu = () => {
-
-
-console.log(foodMenu)
   return (
     <>
       <div className="flex flex-col w-full h-full">
