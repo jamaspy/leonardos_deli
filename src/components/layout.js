@@ -53,7 +53,7 @@ const Layout = ({ children }) => {
           <div className="">
             {" "}
             © {new Date().getFullYear()}, Built by{" "}
-            <a href="https://www.dapperdesigner.com">dapper_designer</a>
+            <a href="https://www.disi.au/" target="_blank" rel="noreferrer">desi digital</a>
           </div>
           <div className="flex flex-row items-center justify-center mt-3 text-lg">
             <FiInstagram className="mr-2" /> <FiFacebook className="mr-2" />
