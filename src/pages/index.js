@@ -10,7 +10,7 @@ import WeeklyLineup from "../components/WeeklyLineup"
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
     {
-      web: allFile(filter: { name: { eq: "hero" } }) {
+      web: allFile(filter: { name: { eq: "newHero" } }) {
         nodes {
           name
           childImageSharp {
