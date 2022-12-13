@@ -1,11 +1,11 @@
-import { graphql, useStaticQuery } from "gatsby"
-import { GatsbyImage } from "gatsby-plugin-image"
-import React from "react"
-import Button from "../components/Button"
-import ProductsRows from "../components/Home/ProductsRows"
-import Layout from "../components/layout"
-import Seo from "../components/seo"
-import WeeklyLineup from "../components/WeeklyLineup"
+import { graphql, useStaticQuery } from "gatsby";
+import { GatsbyImage } from "gatsby-plugin-image";
+import React from "react";
+import Button from "../components/Button";
+import ProductsRows from "../components/Home/ProductsRows";
+import Layout from "../components/layout";
+import Seo from "../components/seo";
+import WeeklyLineup from "../components/WeeklyLineup";
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
@@ -123,29 +123,29 @@ const IndexPage = () => {
         }
       }
     }
-  `)
+  `);
 
-  const heroData = data?.web.nodes[0].childImageSharp.gatsbyImageData
-  const heroMobileData = data?.mobile.nodes[0].childImageSharp.gatsbyImageData
-  const meatDeliImage = data?.deli.nodes[0].childImageSharp.gatsbyImageData
-  const shelfImage = data?.shelf.nodes[0].childImageSharp.gatsbyImageData
-  const barImage = data?.bar.nodes[0].childImageSharp.gatsbyImageData
-  const meatImage = data?.meat.nodes[0].childImageSharp.gatsbyImageData
-  const cheeseImage = data?.cheese.nodes[0].childImageSharp.gatsbyImageData
-  const wineImage = data?.wine.nodes[0].childImageSharp.gatsbyImageData
+  const heroData = data?.web.nodes[0].childImageSharp.gatsbyImageData;
+  const heroMobileData = data?.mobile.nodes[0].childImageSharp.gatsbyImageData;
+  const meatDeliImage = data?.deli.nodes[0].childImageSharp.gatsbyImageData;
+  const shelfImage = data?.shelf.nodes[0].childImageSharp.gatsbyImageData;
+  const barImage = data?.bar.nodes[0].childImageSharp.gatsbyImageData;
+  const meatImage = data?.meat.nodes[0].childImageSharp.gatsbyImageData;
+  const cheeseImage = data?.cheese.nodes[0].childImageSharp.gatsbyImageData;
+  const wineImage = data?.wine.nodes[0].childImageSharp.gatsbyImageData;
 
-  const renderImage = image => {
+  const renderImage = (image) => {
     switch (image) {
       case "meat":
-        return <GatsbyImage image={meatImage} alt="meat" />
+        return <GatsbyImage image={meatImage} alt="meat" />;
       case "cheese":
-        return <GatsbyImage image={cheeseImage} alt="cheese" />
+        return <GatsbyImage image={cheeseImage} alt="cheese" />;
       case "wine":
-        return <GatsbyImage image={wineImage} alt="wine" />
+        return <GatsbyImage image={wineImage} alt="wine" />;
       default:
-        return null
+        return null;
     }
-  }
+  };
 
   return (
     <Layout>
@@ -197,13 +197,14 @@ const IndexPage = () => {
             </div>
             <h1 className="uppercase lg:mb-3">Cheese</h1>
             <p className="text-xs lg:text-base pb-2">
-              Bitey blues, stinky washed rind to nutty and delicious hard
-              cheeses. There’s goat, sheep and cows milk to suit every taste; an
-              everchanging selection of over 30 local and international cheeses
-              from the best producers. We balance our menu between what you
-              expect (parmigiano, cheddar, brie, comte) and what will surprise
-              you (cashel blue from Ireland, American rogue river blue, Dutch
-              wyngaard semi-hard goat, espresso rubbed Wisconsin cheddar)?.
+              Our cheese range is vast and unique. Bitey blues, stinky washed
+              rind, nutty and delicious hard cheeses. With goat, sheep and cows
+              milk to suit every taste; an everchanging selection of over 30
+              local and international cheeses from the best producers. We
+              balance our menu between what you expect (parmigiano, cheddar,
+              brie, comte) and what will surprise you (cashel blue from Ireland,
+              American rogue river blue, Dutch wyngaard semi-hard goat, espresso
+              rubbed cheddar from Wisconsin).
             </p>
           </div>
         </div>
@@ -218,7 +219,8 @@ const IndexPage = () => {
               group of local and international producers. Everything from
               mortadella and salamis to wagyu bresaola, prosciutto and iberico.
               Light, subtle, strong and spicy flavours are all found here. Our
-              vintage meat slicer is worth the trip, everything is cut fresh.
+              vintage meat slicer is worth the trip alone, we slice everything
+              fresh.
             </p>
           </div>
 
@@ -265,12 +267,13 @@ const IndexPage = () => {
             <h1 className="uppercase lg:mb-3">Drinks</h1>
             <p className="text-xs lg:text-base pb-2">
               Classic cocktails include our signature olive brine and cold brew
-              (coffee) martini. Our wine list changes with seasons to reflect
-              the best local and international producers. We currently stock
-              over 30 wines across rose, white, red and skin contact. Something
-              for everyone across taste and budget, beers too - pale ales,
-              lagers and a unique guest beer each week. Our non-alcoholic range
-              is curated and delicious.
+              (coffee) martinis and zesty margaritas with local honey or spicy
+              dash. Our wines adapt with seasons from the best local and
+              international producers. We currently stock over 30 wines across
+              rose, white, red and skin contact. Something for everyone across
+              taste and budget, beers too - pale ales, lagers and a unique guest
+              beer to try each week. Our non-alcoholic range of cocktails, wines
+              and beers is carefully curated.
             </p>
           </div>
         </div>
@@ -280,6 +283,6 @@ const IndexPage = () => {
 
       <WeeklyLineup />
     </Layout>
-  )
-}
-export default IndexPage
+  );
+};
+export default IndexPage;
