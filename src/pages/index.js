@@ -1,11 +1,11 @@
-import { graphql, useStaticQuery } from "gatsby";
-import { GatsbyImage } from "gatsby-plugin-image";
-import React from "react";
-import Button from "../components/Button";
-import ProductsRows from "../components/Home/ProductsRows";
-import Layout from "../components/layout";
-import Seo from "../components/seo";
-import WeeklyLineup from "../components/WeeklyLineup";
+import { graphql, useStaticQuery } from "gatsby"
+import { GatsbyImage } from "gatsby-plugin-image"
+import React from "react"
+import Button from "../components/Button"
+import ProductsRows from "../components/Home/ProductsRows"
+import WeeklyLineup from "../components/WeeklyLineup"
+import Layout from "../components/layout"
+import Seo from "../components/seo"
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
@@ -94,6 +94,20 @@ const IndexPage = () => {
           }
         }
       }
+      made: allFile(filter: { name: { eq: "catering1" } }) {
+        nodes {
+          name
+          childImageSharp {
+            gatsbyImageData(
+              quality: 100
+              width: 100
+              placeholder: TRACED_SVG
+              formats: [AUTO, WEBP, AVIF]
+              layout: FULL_WIDTH
+            )
+          }
+        }
+      }
       shelf: allFile(filter: { name: { eq: "shelves" } }) {
         nodes {
           name
@@ -123,29 +137,34 @@ const IndexPage = () => {
         }
       }
     }
-  `);
+  `)
 
-  const heroData = data?.web.nodes[0].childImageSharp.gatsbyImageData;
-  const heroMobileData = data?.mobile.nodes[0].childImageSharp.gatsbyImageData;
-  const meatDeliImage = data?.deli.nodes[0].childImageSharp.gatsbyImageData;
-  const shelfImage = data?.shelf.nodes[0].childImageSharp.gatsbyImageData;
-  const barImage = data?.bar.nodes[0].childImageSharp.gatsbyImageData;
-  const meatImage = data?.meat.nodes[0].childImageSharp.gatsbyImageData;
-  const cheeseImage = data?.cheese.nodes[0].childImageSharp.gatsbyImageData;
-  const wineImage = data?.wine.nodes[0].childImageSharp.gatsbyImageData;
+  const heroData = data?.web.nodes[0].childImageSharp.gatsbyImageData
+  const heroMobileData = data?.mobile.nodes[0].childImageSharp.gatsbyImageData
+  const meatDeliImage = data?.deli.nodes[0].childImageSharp.gatsbyImageData
+  const shelfImage = data?.shelf.nodes[0].childImageSharp.gatsbyImageData
+  const barImage = data?.bar.nodes[0].childImageSharp.gatsbyImageData
+  const meatImage = data?.meat.nodes[0].childImageSharp.gatsbyImageData
+  const cheeseImage = data?.cheese.nodes[0].childImageSharp.gatsbyImageData
+  const wineImage = data?.wine.nodes[0].childImageSharp.gatsbyImageData
+  const madeImage = data?.made.nodes[0].childImageSharp.gatsbyImageData
 
-  const renderImage = (image) => {
+  const renderImage = image => {
     switch (image) {
       case "meat":
-        return <GatsbyImage image={meatImage} alt="meat" />;
+        return <GatsbyImage image={meatImage} alt="meat" />
       case "cheese":
-        return <GatsbyImage image={cheeseImage} alt="cheese" />;
+        return <GatsbyImage image={cheeseImage} alt="cheese" />
       case "wine":
-        return <GatsbyImage image={wineImage} alt="wine" />;
+        return <GatsbyImage image={wineImage} alt="wine" />
+      case "wine":
+        return <GatsbyImage image={wineImage} alt="wine" />
+      case "made":
+        return <GatsbyImage image={madeImage} alt="wine" />
       default:
-        return null;
+        return null
     }
-  };
+  }
 
   return (
     <Layout>
@@ -243,6 +262,7 @@ const IndexPage = () => {
             </div>
           </div>
         </div>
+
         <div className="bg-offWhite flex flex-row w-full mt-12 shadow-md">
           <div
             className="grid"
@@ -277,12 +297,48 @@ const IndexPage = () => {
             </p>
           </div>
         </div>
+
+        <div className="bg-oliveGreen flex flex-row w-full mt-12 shadow-md">
+          <div className="flex-1  w-full text-center flex items-center flex-col justify-center px-4">
+            <div className="xl:w-40 xl:h-40 md:w-24 md:h-24">
+              {renderImage("cheese")}
+            </div>
+            <h1 className="uppercase lg:mb-3">Freshly Made</h1>
+            <p className="text-xs lg:text-base pb-2">
+              Home cooked hot bowls change each week - nourishing and simple
+              meals like chili con carne, stews and soups using our deli produce
+              and fresh ingredients from local suppliers. Our range of seasonal
+              fresh salads are a delight and pair perfectly with our sardine,
+              anchovy, terrine, paté and parfait plates.
+            </p>
+          </div>
+
+          <div
+            className=""
+            style={{
+              width: "60%",
+              clipPath: "polygon(20% 0, 100% 0, 100% 100%, 0% 100%)",
+            }}
+          >
+            <div className="hidden md:block">
+              <GatsbyImage
+                image={madeImage}
+                alt={`leo store front`}
+                style={{
+                  gridArea: "1/1",
+                }}
+                layout="fullWidth"
+              />
+            </div>
+          </div>
+        </div>
+
         <Button label="Make Booking" />
       </div>
       {/* TABLET+ PRODUCT LISTING ENDS */}
 
       <WeeklyLineup />
     </Layout>
-  );
-};
-export default IndexPage;
+  )
+}
+export default IndexPage

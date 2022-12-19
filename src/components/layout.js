@@ -5,9 +5,9 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react"
+import { graphql, useStaticQuery } from "gatsby"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+import React from "react"
 
 import { FiFacebook, FiInstagram, FiTwitter, FiYoutube } from "react-icons/fi"
 import Header from "./header"
@@ -47,13 +47,15 @@ const Layout = ({ children }) => {
             <div className="flex flex-row w-full items-center justify-center">
               <p className="mr-2">Fri: 12-10</p>
               <p className="mr-2">Sat: 11-10</p>
-              <p className="mr-2">Sun: 12-4</p>
+              <p className="mr-2">Sun: 12-6</p>
             </div>
           </div>
           <div className="">
             {" "}
             © {new Date().getFullYear()}, Built by{" "}
-            <a href="https://www.disi.au/" target="_blank" rel="noreferrer">desi digital</a>
+            <a href="https://www.disi.au/" target="_blank" rel="noreferrer">
+              desi digital
+            </a>
           </div>
           <div className="flex flex-row items-center justify-center mt-3 text-lg">
             <FiInstagram className="mr-2" /> <FiFacebook className="mr-2" />

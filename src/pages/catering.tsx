@@ -50,13 +50,14 @@ const Catering = () => {
         <div className="block md:hidden">
           <GatsbyImage image={heroMobileData} alt={`leo store front`} />
         </div>
-        <h1 className="mt-8 mb-4">Quality Catering</h1>
+        <h1 className="mt-8 mb-4">Beautiful catering from our deli</h1>
         <p>
-          Yes, we cater love doing it. Available for all sorts of events,
+          Yes, we cater and love doing it. Available for all sorts of events;
           private, corporate, and picnics. We can arrange beautiful pre-prepared
           platters or wrap-up produce for you to arrange yourself. We offer
           baguettes, our full deli range, and (with notice) soups, chilli and
-          stews. Delivery or pick-up. Text us on{" "}
+          stews. Delivery or pick-up. Text us on 0430 175 155 to chat about your
+          next work event or gathering. Text us on{" "}
           <span className="text-blue-500">0430 175 155</span> to chat about your
           next event or gathering.
         </p>

@@ -12,7 +12,7 @@ const WeeklyLineup = () => {
     },
     {
       day: "Wednesday",
-      action: "Free cheese with every plate",
+      action: "Wine Wednesday - a free glass with any plate",
     },
     {
       day: "Thursday",
@@ -24,12 +24,11 @@ const WeeklyLineup = () => {
     },
     {
       day: "Saturday",
-      action: "Happy hours 4-5pm and 9-10pm",
+      action: "Happy hours 4-5pm and 9-10pm, often live music",
     },
     {
       day: "Sunday",
-      action:
-        "Sinatra Sundays: Cold Brew, Sinatra playing and our perfect Bloody Marys)",
+      action: "Lazy Sundays at Leo’s - happy hour prices all afternoon",
     },
   ]
   return (
