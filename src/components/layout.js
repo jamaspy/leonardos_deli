@@ -39,15 +39,13 @@ const Layout = ({ children }) => {
         <main className="container m-auto">{children}</main>
         <footer className="text-center text-xs mt-12 pb-8 flex flex-col w-full">
           <div className="mb-4">
-            <p>Mon: Closed</p>
-            <div className="flex flex-row w-full items-center justify-center">
-              <p className="mr-2">Tues/Weds: 12-8</p>
-              <p className="mr-2">Thurs: 12-10</p>
-            </div>
-            <div className="flex flex-row w-full items-center justify-center">
-              <p className="mr-2">Fri: 12-10</p>
-              <p className="mr-2">Sat: 11-10</p>
-              <p className="mr-2">Sun: 12-6</p>
+            <div className="flex flex-col w-full items-center justify-center">
+              <p className="mr-2">Mon/Tues: 4-Late</p>
+              <p className="mr-2">Wed: Closed</p>
+              <p className="mr-2 block">Thurs/Fri: 12-Late</p>
+
+              <p className="mr-2">Sat: 11-Late</p>
+              <p className="mr-2">Sun: 4-Late</p>
             </div>
           </div>
           <div className="">

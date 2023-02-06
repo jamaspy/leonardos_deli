@@ -4,7 +4,7 @@ const WeeklyLineup = () => {
   const lineup = [
     {
       day: "Monday",
-      action: "Closed",
+      action: "A free glass of wine with any plate",
     },
     {
       day: "Tuesday",
@@ -12,7 +12,7 @@ const WeeklyLineup = () => {
     },
     {
       day: "Wednesday",
-      action: "Wine Wednesday - a free glass with any plate",
+      action: "Closed",
     },
     {
       day: "Thursday",
@@ -43,7 +43,7 @@ const WeeklyLineup = () => {
         <p className="pl-4 md:text-4xl uppercase ">Weekly Line Up</p>
       </div>
 
-      <div className="flex flex-col justify-between h-full mt-8 px-2">
+      <div className="flex flex-col justify-between h-full mt-8 px-4">
         {lineup.map((day, index) => (
           <div key={index} className="flex flex-col md:flex-row mb-2">
             <p className="text-xl font-semibold">{day.day}: </p>

@@ -68,7 +68,7 @@ const About = () => {
           We serve hot food, delicious salads as well as charcuterie, terrines,
           patés, cheese, and a range of olives, dips, pickles, etc for use at
           home (they also make great gifts!). We are fully licensed and have an
-          excellent non-alcoholic list too
+          excellent non-alcoholic list too.
         </p>
         <p className="mt-8">
           Kids and dogs are welcome, our kids’ menu is tasty and fresh and not
@@ -79,7 +79,7 @@ const About = () => {
           <a href="mailto:hello@leonardosdeli.com.au">
             {" "}
             hello@leonardosdeli.com.au
-          </a>
+          </a>{" "}
           to order a gift card.
         </p>
         <p className="mt-8">
@@ -100,7 +100,7 @@ const About = () => {
           <span className="font-bold">Email: </span>
           <a href="mailto:hello@leonardosdeli.com.au">
             {" "}
-            hello@leonardosdeli.com.au
+            hello@leonardosdeli.com.au{" "}
           </a>
         </p>
         <p>

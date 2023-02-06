@@ -94,7 +94,7 @@ const IndexPage = () => {
           }
         }
       }
-      made: allFile(filter: { name: { eq: "catering1" } }) {
+      made: allFile(filter: { name: { eq: "freshly" } }) {
         nodes {
           name
           childImageSharp {
@@ -122,7 +122,7 @@ const IndexPage = () => {
           }
         }
       }
-      bar: allFile(filter: { name: { eq: "mitchpour2" } }) {
+      bar: allFile(filter: { name: { eq: "notM" } }) {
         nodes {
           name
           childImageSharp {
@@ -157,8 +157,6 @@ const IndexPage = () => {
         return <GatsbyImage image={cheeseImage} alt="cheese" />
       case "wine":
         return <GatsbyImage image={wineImage} alt="wine" />
-      case "wine":
-        return <GatsbyImage image={wineImage} alt="wine" />
       case "made":
         return <GatsbyImage image={madeImage} alt="wine" />
       default:
@@ -177,7 +175,7 @@ const IndexPage = () => {
       </div>
       <div className="text-center my-8 px-4 md:px-24 xl:px-0">
         <h1 className="uppercase font-black text-2xl md:text-4xl text-center mb-6 md:mb-2">
-          a new deli and bar in avalon beach
+          deli and bar in avalon beach
         </h1>
         <p className="uppercase mx-12">
           Open now for dine-in, delivery and pick-up

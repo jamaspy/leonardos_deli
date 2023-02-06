@@ -16,13 +16,13 @@ const Contact = () => {
       <h3 className="text-center mt-4">0499 017 077</h3>
 
       <div className="mt-8 flex flex-col items-center justify-center">
-        <p className="">Monday: Closed</p>
-        <p className="">Tuesday: 12:00pm - 8:00pm</p>
-        <p className="">Wednesday: 12:00pm - 8:00pm</p>
-        <p className="">Thursday: 12:00pm - 10:00pm</p>
-        <p className="">Friday: 12:00pm - 10:00pm</p>
-        <p className="">Saturday: 11:00am - 10:00pm</p>
-        <p className="">Sunday: 12:00pm - 4:00pm</p>
+        <p className="">Monday: 4:00pm - Late</p>
+        <p className="">Tuesday: 4:00pm - Late</p>
+        <p className="">Wednesday: CLOSED</p>
+        <p className="">Thursday: 12:00pm - Late</p>
+        <p className="">Friday: 12:00pm - Late</p>
+        <p className="">Saturday: 11:00am - Late</p>
+        <p className="">Sunday: 4:00pm - Late</p>
       </div>
       <hr className="mt-8" />
     </Layout>
