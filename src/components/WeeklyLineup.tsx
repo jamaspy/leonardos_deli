@@ -1,14 +1,14 @@
-import React from "react"
+import React from "react";
 
 const WeeklyLineup = () => {
   const lineup = [
     {
       day: "Monday",
-      action: "A free glass of wine with any plate",
+      action: "Happy hour 4:00 - 6:00",
     },
     {
       day: "Tuesday",
-      action: "Happy hour prices all day long",
+      action: "Happy hour 4:00 - 6:00",
     },
     {
       day: "Wednesday",
@@ -24,13 +24,13 @@ const WeeklyLineup = () => {
     },
     {
       day: "Saturday",
-      action: "Happy hours 4-5pm and 9-10pm, often live music",
+      action: "Live Music, Happy hours 4-5pm and 9-10pm",
     },
     {
       day: "Sunday",
-      action: "Lazy Sundays at Leo’s - happy hour prices all afternoon",
+      action: "Lazy Sundays at Leo’s - money off selected cocktails and wines",
     },
-  ]
+  ];
   return (
     <div className="w-full lg:mt-24 md:mt-12 mt-8">
       <div
@@ -52,7 +52,7 @@ const WeeklyLineup = () => {
         ))}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default WeeklyLineup
+export default WeeklyLineup;
