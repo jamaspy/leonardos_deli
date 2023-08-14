@@ -165,178 +165,183 @@ const IndexPage = () => {
   }
 
   return (
-    <Layout>
-      <Seo title="Home" />
-      <div className="hidden md:block">
-        <GatsbyImage image={heroData} alt={`leo store front`} />
-      </div>
-      <div className="block md:hidden">
-        <GatsbyImage image={heroMobileData} alt={`leo store front`} />
-      </div>
-      <div className="text-center my-8 px-4 md:px-24 xl:px-0">
-        <h1 className="uppercase font-black text-2xl md:text-4xl text-center mb-6 md:mb-2">
-          deli and bar in avalon beach
-        </h1>
-        <p className="uppercase mx-12">
-          Open now for dine-in, delivery and pick-up
-        </p>
-        <Button label="Make Booking" />
-      </div>
+    <div className="min-h-screen w-full p-12 flex flex-col items-center justify-center">
+      {renderImage("cheese")}
+      <p> Permanently Closed</p>
+    </div>
+    // DEPRECATED SITE
+    // <Layout>
+    //   <Seo title="Home" />
+    //   <div className="hidden md:block">
+    //     <GatsbyImage image={heroData} alt={`leo store front`} />
+    //   </div>
+    //   <div className="block md:hidden">
+    //     <GatsbyImage image={heroMobileData} alt={`leo store front`} />
+    //   </div>
+    //   <div className="text-center my-8 px-4 md:px-24 xl:px-0">
+    //     <h1 className="uppercase font-black text-2xl md:text-4xl text-center mb-6 md:mb-2">
+    //       deli and bar in avalon beach
+    //     </h1>
+    //     <p className="uppercase mx-12">
+    //       Open now for dine-in, delivery and pick-up
+    //     </p>
+    //     <Button label="Make Booking" />
+    //   </div>
 
-      {/* MOBILE PRODUCT LISTING START */}
-      <div className="block md:hidden">
-        <ProductsRows />
-      </div>
-      {/* MOBILE PRODUCT LISTING END */}
+    //   {/* MOBILE PRODUCT LISTING START */}
+    //   <div className="block md:hidden">
+    //     <ProductsRows />
+    //   </div>
+    //   {/* MOBILE PRODUCT LISTING END */}
 
-      {/* TABLET+ PRODUCT LISTING START */}
-      <div className="hidden md:block md:px-4 lg:px-0 ">
-        <div className="bg-offWhite flex flex-row w-full mt-8 shadow-md">
-          <div
-            className="grid"
-            style={{
-              width: "60%",
-              clipPath: "polygon(0 0, 80% 0, 100% 100%, 0% 100%)",
-            }}
-          >
-            <GatsbyImage
-              image={shelfImage}
-              alt={`leo store front`}
-              style={{
-                gridArea: "1/1",
-              }}
-              layout="fullWidth"
-            />
-          </div>
-          <div className="flex-1  w-full text-center flex items-center flex-col justify-center px-4">
-            <div className="xl:w-40 xl:h-40 md:w-24 md:h-24">
-              {renderImage("cheese")}
-            </div>
-            <h1 className="uppercase lg:mb-3">Cheese</h1>
-            <p className="text-xs lg:text-base pb-2">
-              Our cheese range is vast and unique. Bitey blues, stinky washed
-              rind, nutty and delicious hard cheeses. With goat, sheep and cows
-              milk to suit every taste; an everchanging selection of over 30
-              local and international cheeses from the best producers. We
-              balance our menu between what you expect (parmigiano, cheddar,
-              brie, comte) and what will surprise you (cashel blue from Ireland,
-              American rogue river blue, Dutch wyngaard semi-hard goat, espresso
-              rubbed cheddar from Wisconsin).
-            </p>
-          </div>
-        </div>
-        <div className="bg-oliveGreen flex flex-row w-full mt-12 shadow-md">
-          <div className="flex-1  w-full text-center flex items-center flex-col justify-center px-4">
-            <div className="xl:w-40 xl:h-40 md:w-24 md:h-24">
-              {renderImage("meat")}
-            </div>
-            <h1 className="uppercase lg:mb-3">Meat</h1>
-            <p className="text-xs lg:text-base pb-2">
-              World-class meats (turkey, pork, venison and beef) from a select
-              group of local and international producers. Everything from
-              mortadella and salamis to wagyu bresaola, prosciutto and iberico.
-              Light, subtle, strong and spicy flavours are all found here. Our
-              vintage meat slicer is worth the trip alone, we slice everything
-              fresh.
-            </p>
-          </div>
+    //   {/* TABLET+ PRODUCT LISTING START */}
+    //   <div className="hidden md:block md:px-4 lg:px-0 ">
+    //     <div className="bg-offWhite flex flex-row w-full mt-8 shadow-md">
+    //       <div
+    //         className="grid"
+    //         style={{
+    //           width: "60%",
+    //           clipPath: "polygon(0 0, 80% 0, 100% 100%, 0% 100%)",
+    //         }}
+    //       >
+    //         <GatsbyImage
+    //           image={shelfImage}
+    //           alt={`leo store front`}
+    //           style={{
+    //             gridArea: "1/1",
+    //           }}
+    //           layout="fullWidth"
+    //         />
+    //       </div>
+    //       <div className="flex-1  w-full text-center flex items-center flex-col justify-center px-4">
+    //         <div className="xl:w-40 xl:h-40 md:w-24 md:h-24">
+    //           {renderImage("cheese")}
+    //         </div>
+    //         <h1 className="uppercase lg:mb-3">Cheese</h1>
+    //         <p className="text-xs lg:text-base pb-2">
+    //           Our cheese range is vast and unique. Bitey blues, stinky washed
+    //           rind, nutty and delicious hard cheeses. With goat, sheep and cows
+    //           milk to suit every taste; an everchanging selection of over 30
+    //           local and international cheeses from the best producers. We
+    //           balance our menu between what you expect (parmigiano, cheddar,
+    //           brie, comte) and what will surprise you (cashel blue from Ireland,
+    //           American rogue river blue, Dutch wyngaard semi-hard goat, espresso
+    //           rubbed cheddar from Wisconsin).
+    //         </p>
+    //       </div>
+    //     </div>
+    //     <div className="bg-oliveGreen flex flex-row w-full mt-12 shadow-md">
+    //       <div className="flex-1  w-full text-center flex items-center flex-col justify-center px-4">
+    //         <div className="xl:w-40 xl:h-40 md:w-24 md:h-24">
+    //           {renderImage("meat")}
+    //         </div>
+    //         <h1 className="uppercase lg:mb-3">Meat</h1>
+    //         <p className="text-xs lg:text-base pb-2">
+    //           World-class meats (turkey, pork, venison and beef) from a select
+    //           group of local and international producers. Everything from
+    //           mortadella and salamis to wagyu bresaola, prosciutto and iberico.
+    //           Light, subtle, strong and spicy flavours are all found here. Our
+    //           vintage meat slicer is worth the trip alone, we slice everything
+    //           fresh.
+    //         </p>
+    //       </div>
 
-          <div
-            className=""
-            style={{
-              width: "60%",
-              clipPath: "polygon(20% 0, 100% 0, 100% 100%, 0% 100%)",
-            }}
-          >
-            <div className="hidden md:block">
-              <GatsbyImage
-                image={meatDeliImage}
-                alt={`leo store front`}
-                style={{
-                  gridArea: "1/1",
-                }}
-                layout="fullWidth"
-              />
-            </div>
-          </div>
-        </div>
+    //       <div
+    //         className=""
+    //         style={{
+    //           width: "60%",
+    //           clipPath: "polygon(20% 0, 100% 0, 100% 100%, 0% 100%)",
+    //         }}
+    //       >
+    //         <div className="hidden md:block">
+    //           <GatsbyImage
+    //             image={meatDeliImage}
+    //             alt={`leo store front`}
+    //             style={{
+    //               gridArea: "1/1",
+    //             }}
+    //             layout="fullWidth"
+    //           />
+    //         </div>
+    //       </div>
+    //     </div>
 
-        <div className="bg-offWhite flex flex-row w-full mt-12 shadow-md">
-          <div
-            className="grid"
-            style={{
-              width: "60%",
-              clipPath: "polygon(0 0, 80% 0, 100% 100%, 0% 100%)",
-            }}
-          >
-            <GatsbyImage
-              image={barImage}
-              alt={`leo store front`}
-              style={{
-                gridArea: "1/1",
-              }}
-              layout="fullWidth"
-            />
-          </div>
-          <div className="flex-1  w-full text-center flex items-center flex-col justify-center px-2">
-            <div className="xl:w-40 xl:h-40 md:w-24 md:h-24">
-              {renderImage("wine")}
-            </div>
-            <h1 className="uppercase lg:mb-3">Drinks</h1>
-            <p className="text-xs lg:text-base pb-2">
-              Classic cocktails include our signature olive brine and cold brew
-              (coffee) martinis and zesty margaritas with local honey or spicy
-              dash. Our wines adapt with seasons from the best local and
-              international producers. We currently stock over 30 wines across
-              rose, white, red and skin contact. Something for everyone across
-              taste and budget, beers too - pale ales, lagers and a unique guest
-              beer to try each week. Our non-alcoholic range of cocktails, wines
-              and beers is carefully curated.
-            </p>
-          </div>
-        </div>
+    //     <div className="bg-offWhite flex flex-row w-full mt-12 shadow-md">
+    //       <div
+    //         className="grid"
+    //         style={{
+    //           width: "60%",
+    //           clipPath: "polygon(0 0, 80% 0, 100% 100%, 0% 100%)",
+    //         }}
+    //       >
+    //         <GatsbyImage
+    //           image={barImage}
+    //           alt={`leo store front`}
+    //           style={{
+    //             gridArea: "1/1",
+    //           }}
+    //           layout="fullWidth"
+    //         />
+    //       </div>
+    //       <div className="flex-1  w-full text-center flex items-center flex-col justify-center px-2">
+    //         <div className="xl:w-40 xl:h-40 md:w-24 md:h-24">
+    //           {renderImage("wine")}
+    //         </div>
+    //         <h1 className="uppercase lg:mb-3">Drinks</h1>
+    //         <p className="text-xs lg:text-base pb-2">
+    //           Classic cocktails include our signature olive brine and cold brew
+    //           (coffee) martinis and zesty margaritas with local honey or spicy
+    //           dash. Our wines adapt with seasons from the best local and
+    //           international producers. We currently stock over 30 wines across
+    //           rose, white, red and skin contact. Something for everyone across
+    //           taste and budget, beers too - pale ales, lagers and a unique guest
+    //           beer to try each week. Our non-alcoholic range of cocktails, wines
+    //           and beers is carefully curated.
+    //         </p>
+    //       </div>
+    //     </div>
 
-        <div className="bg-oliveGreen flex flex-row w-full mt-12 shadow-md">
-          <div className="flex-1  w-full text-center flex items-center flex-col justify-center px-4">
-            <div className="xl:w-40 xl:h-40 md:w-24 md:h-24">
-              {renderImage("cheese")}
-            </div>
-            <h1 className="uppercase lg:mb-3">Freshly Made</h1>
-            <p className="text-xs lg:text-base pb-2">
-              Home cooked hot bowls change each week - nourishing and simple
-              meals like chili con carne, stews and soups using our deli produce
-              and fresh ingredients from local suppliers. Our range of seasonal
-              fresh salads are a delight and pair perfectly with our sardine,
-              anchovy, terrine, paté and parfait plates.
-            </p>
-          </div>
+    //     <div className="bg-oliveGreen flex flex-row w-full mt-12 shadow-md">
+    //       <div className="flex-1  w-full text-center flex items-center flex-col justify-center px-4">
+    //         <div className="xl:w-40 xl:h-40 md:w-24 md:h-24">
+    //           {renderImage("cheese")}
+    //         </div>
+    //         <h1 className="uppercase lg:mb-3">Freshly Made</h1>
+    //         <p className="text-xs lg:text-base pb-2">
+    //           Home cooked hot bowls change each week - nourishing and simple
+    //           meals like chili con carne, stews and soups using our deli produce
+    //           and fresh ingredients from local suppliers. Our range of seasonal
+    //           fresh salads are a delight and pair perfectly with our sardine,
+    //           anchovy, terrine, paté and parfait plates.
+    //         </p>
+    //       </div>
 
-          <div
-            className=""
-            style={{
-              width: "60%",
-              clipPath: "polygon(20% 0, 100% 0, 100% 100%, 0% 100%)",
-            }}
-          >
-            <div className="hidden md:block">
-              <GatsbyImage
-                image={madeImage}
-                alt={`leo store front`}
-                style={{
-                  gridArea: "1/1",
-                }}
-                layout="fullWidth"
-              />
-            </div>
-          </div>
-        </div>
+    //       <div
+    //         className=""
+    //         style={{
+    //           width: "60%",
+    //           clipPath: "polygon(20% 0, 100% 0, 100% 100%, 0% 100%)",
+    //         }}
+    //       >
+    //         <div className="hidden md:block">
+    //           <GatsbyImage
+    //             image={madeImage}
+    //             alt={`leo store front`}
+    //             style={{
+    //               gridArea: "1/1",
+    //             }}
+    //             layout="fullWidth"
+    //           />
+    //         </div>
+    //       </div>
+    //     </div>
 
-        <Button label="Make Booking" />
-      </div>
-      {/* TABLET+ PRODUCT LISTING ENDS */}
+    //     <Button label="Make Booking" />
+    //   </div>
+    //   {/* TABLET+ PRODUCT LISTING ENDS */}
 
-      <WeeklyLineup />
-    </Layout>
+    //   <WeeklyLineup />
+    // </Layout>
   )
 }
 export default IndexPage
